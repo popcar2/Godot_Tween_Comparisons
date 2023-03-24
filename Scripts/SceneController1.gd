@@ -1,7 +1,7 @@
 extends Control
 
 const START_X: int = 60
-const END_X: int = 520
+const END_X: int = 514
 
 @onready var linear_sprite: Sprite2D = %"Linear Sprite"
 @onready var sine_sprite: Sprite2D = %"Sine Sprite"
