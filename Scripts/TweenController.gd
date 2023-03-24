@@ -13,5 +13,8 @@ func _on_timer_timeout():
 	await get_tree().create_timer(cooldown).timeout
 	timer.start()
 
-func set_time(time: float):
-	timer.wait_time = time
+func set_time(value: float):
+	timer.wait_time = value
+
+func set_cooldown(value: float):
+	cooldown = value

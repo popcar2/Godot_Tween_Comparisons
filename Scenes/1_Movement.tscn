@@ -277,10 +277,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Scene Name" type="Label" parent="VBoxContainer/Settings Panel/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Simple Movement"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Settings Panel/HBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/Settings Panel/HBoxContainer/HBoxContainer"]
+[node name="Time Label" type="Label" parent="VBoxContainer/Settings Panel/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "Time"
 horizontal_alignment = 1
@@ -292,6 +299,7 @@ layout_mode = 2
 min_value = 0.1
 step = 0.1
 value = 1.0
+update_on_text_changed = true
 
 [node name="Time Slider" type="HSlider" parent="VBoxContainer/Settings Panel/HBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
@@ -303,5 +311,36 @@ max_value = 10.0
 step = 0.1
 value = 1.0
 
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/Settings Panel/HBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Settings Panel/HBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[node name="Cooldown Label" type="Label" parent="VBoxContainer/Settings Panel/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Cooldown"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Cooldown Spinbox" type="SpinBox" parent="VBoxContainer/Settings Panel/HBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+step = 0.1
+value = 0.5
+update_on_text_changed = true
+
+[node name="Cooldown Slider" type="HSlider" parent="VBoxContainer/Settings Panel/HBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 5.0
+step = 0.1
+value = 0.5
+
 [connection signal="value_changed" from="VBoxContainer/Settings Panel/HBoxContainer/HBoxContainer/Time Spinbox" to="." method="_on_time_changed"]
 [connection signal="value_changed" from="VBoxContainer/Settings Panel/HBoxContainer/HBoxContainer/Time Slider" to="." method="_on_time_changed"]
+[connection signal="value_changed" from="VBoxContainer/Settings Panel/HBoxContainer/HBoxContainer2/Cooldown Spinbox" to="." method="_on_cooldown_changed"]
+[connection signal="value_changed" from="VBoxContainer/Settings Panel/HBoxContainer/HBoxContainer2/Cooldown Slider" to="." method="_on_cooldown_changed"]
