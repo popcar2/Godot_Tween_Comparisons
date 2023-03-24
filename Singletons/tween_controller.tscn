@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpxrbcuujsvmg"]
+
+[ext_resource type="Script" path="res://Scripts/TweenController.gd" id="1_xbff7"]
+
+[node name="TweenController" type="Node"]
+script = ExtResource("1_xbff7")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
