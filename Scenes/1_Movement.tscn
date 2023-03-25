@@ -350,6 +350,7 @@ step = 0.1
 value = 0.5
 
 [node name="EaseType Option" type="OptionButton" parent="VBoxContainer/Settings Panel/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 item_count = 4
 selected = 2

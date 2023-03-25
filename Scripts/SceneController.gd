@@ -15,6 +15,7 @@ extends Control
 @onready var time_slider: Slider = %"Time Slider"
 @onready var cooldown_spinbox: SpinBox = %"Cooldown Spinbox"
 @onready var cooldown_slider: Slider = %"Cooldown Slider"
+@onready var easetype_option: OptionButton = %"EaseType Option"
 
 @export var tween_resources: Array[TweenResource]
 
@@ -22,6 +23,19 @@ var cycle = true
 
 func _ready():
 	tween_controller.begin_tween.connect(activate_tweens)
+	
+	# update settings
+	time_spinbox.value = tween_controller.get_time()
+	time_slider.value = tween_controller.get_time()
+	cooldown_spinbox.value = tween_controller.get_cooldown()
+	cooldown_slider.value = tween_controller.get_cooldown()
+	
+	var current_ease: Tween.EaseType = tween_controller.get_ease()
+	match current_ease:
+		Tween.EASE_IN: easetype_option.select(0)
+		Tween.EASE_OUT: easetype_option.select(1)
+		Tween.EASE_IN_OUT: easetype_option.select(2)
+		Tween.EASE_OUT_IN: easetype_option.select(3)
 	
 func activate_tweens(time: float, ease_type: Tween.EaseType):
 	var tween: Tween = get_tree().create_tween()

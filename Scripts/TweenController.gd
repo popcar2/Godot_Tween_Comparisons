@@ -17,8 +17,17 @@ func _on_timer_timeout():
 func set_time(value: float):
 	timer.wait_time = value
 
+func get_time():
+	return timer.wait_time
+
 func set_cooldown(value: float):
 	cooldown = value
 
+func get_cooldown():
+	return cooldown
+
 func set_ease(value: Tween.EaseType):
 	ease_type = value
+
+func get_ease():
+	return ease_type
