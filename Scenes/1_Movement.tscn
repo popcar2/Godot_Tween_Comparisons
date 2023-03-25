@@ -25,12 +25,12 @@ layout_mode = 2
 size_flags_vertical = 3
 columns = 2
 
-[node name="Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+[node name="Linear Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Panel"]
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Linear Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -43,18 +43,18 @@ theme_override_font_sizes/font_size = 32
 text = "Linear"
 horizontal_alignment = 1
 
-[node name="Linear Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Panel"]
+[node name="Linear Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Linear Panel"]
 unique_name_in_owner = true
 position = Vector2(60, 70)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_cpc7k")
 
-[node name="Panel2" type="Panel" parent="VBoxContainer/GridContainer"]
+[node name="Sine Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Panel2"]
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Sine Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -67,18 +67,18 @@ theme_override_font_sizes/font_size = 32
 text = "Sine"
 horizontal_alignment = 1
 
-[node name="Sine Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Panel2"]
+[node name="Sine Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Sine Panel"]
 unique_name_in_owner = true
 position = Vector2(60, 70)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_cpc7k")
 
-[node name="Panel3" type="Panel" parent="VBoxContainer/GridContainer"]
+[node name="Quad Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Panel3"]
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quad Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -91,18 +91,18 @@ theme_override_font_sizes/font_size = 32
 text = "Quadratic"
 horizontal_alignment = 1
 
-[node name="Quad Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Panel3"]
+[node name="Quad Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Quad Panel"]
 unique_name_in_owner = true
 position = Vector2(60, 70)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_cpc7k")
 
-[node name="Panel4" type="Panel" parent="VBoxContainer/GridContainer"]
+[node name="Cubic Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Panel4"]
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Cubic Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -115,18 +115,18 @@ theme_override_font_sizes/font_size = 32
 text = "Cubic"
 horizontal_alignment = 1
 
-[node name="Cubic Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Panel4"]
+[node name="Cubic Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Cubic Panel"]
 unique_name_in_owner = true
 position = Vector2(60, 70)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_cpc7k")
 
-[node name="Panel5" type="Panel" parent="VBoxContainer/GridContainer"]
+[node name="Quart Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Panel5"]
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quart Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -139,18 +139,18 @@ theme_override_font_sizes/font_size = 32
 text = "Quartic"
 horizontal_alignment = 1
 
-[node name="Quart Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Panel5"]
+[node name="Quart Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Quart Panel"]
 unique_name_in_owner = true
 position = Vector2(60, 70)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_cpc7k")
 
-[node name="Panel6" type="Panel" parent="VBoxContainer/GridContainer"]
+[node name="Quint Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Panel6"]
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quint Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -163,18 +163,18 @@ theme_override_font_sizes/font_size = 32
 text = "Quintic"
 horizontal_alignment = 1
 
-[node name="Quint Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Panel6"]
+[node name="Quint Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Quint Panel"]
 unique_name_in_owner = true
 position = Vector2(60, 70)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_cpc7k")
 
-[node name="Panel7" type="Panel" parent="VBoxContainer/GridContainer"]
+[node name="Expo Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Panel7"]
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Expo Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -187,18 +187,18 @@ theme_override_font_sizes/font_size = 32
 text = "Exponential"
 horizontal_alignment = 1
 
-[node name="Expo Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Panel7"]
+[node name="Expo Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Expo Panel"]
 unique_name_in_owner = true
 position = Vector2(60, 70)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_cpc7k")
 
-[node name="Panel8" type="Panel" parent="VBoxContainer/GridContainer"]
+[node name="Elastic Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Panel8"]
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Elastic Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -211,18 +211,18 @@ theme_override_font_sizes/font_size = 32
 text = "Elastic"
 horizontal_alignment = 1
 
-[node name="Elastic Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Panel8"]
+[node name="Elastic Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Elastic Panel"]
 unique_name_in_owner = true
 position = Vector2(60, 70)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_cpc7k")
 
-[node name="Panel9" type="Panel" parent="VBoxContainer/GridContainer"]
+[node name="Bounce Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Panel9"]
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Bounce Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -235,18 +235,18 @@ theme_override_font_sizes/font_size = 32
 text = "Bounce"
 horizontal_alignment = 1
 
-[node name="Bounce Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Panel9"]
+[node name="Bounce Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Bounce Panel"]
 unique_name_in_owner = true
 position = Vector2(60, 70)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_cpc7k")
 
-[node name="Panel10" type="Panel" parent="VBoxContainer/GridContainer"]
+[node name="Back Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Panel10"]
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Back Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -259,7 +259,7 @@ theme_override_font_sizes/font_size = 32
 text = "Back"
 horizontal_alignment = 1
 
-[node name="Back Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Panel10"]
+[node name="Back Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Back Panel"]
 unique_name_in_owner = true
 position = Vector2(60, 70)
 scale = Vector2(0.5, 0.5)
@@ -303,7 +303,7 @@ update_on_text_changed = true
 
 [node name="Time Slider" type="HSlider" parent="VBoxContainer/Settings Panel/HBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_vertical = 4
 min_value = 0.1
@@ -333,14 +333,28 @@ update_on_text_changed = true
 
 [node name="Cooldown Slider" type="HSlider" parent="VBoxContainer/Settings Panel/HBoxContainer/HBoxContainer2"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 0)
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_vertical = 4
 max_value = 5.0
 step = 0.1
 value = 0.5
 
+[node name="EaseType Option" type="OptionButton" parent="VBoxContainer/Settings Panel/HBoxContainer"]
+layout_mode = 2
+item_count = 4
+selected = 2
+popup/item_0/text = "Ease In"
+popup/item_0/id = 0
+popup/item_1/text = "Ease Out"
+popup/item_1/id = 1
+popup/item_2/text = "Ease In Out"
+popup/item_2/id = 2
+popup/item_3/text = "Ease Out In"
+popup/item_3/id = 3
+
 [connection signal="value_changed" from="VBoxContainer/Settings Panel/HBoxContainer/HBoxContainer/Time Spinbox" to="." method="_on_time_changed"]
 [connection signal="value_changed" from="VBoxContainer/Settings Panel/HBoxContainer/HBoxContainer/Time Slider" to="." method="_on_time_changed"]
 [connection signal="value_changed" from="VBoxContainer/Settings Panel/HBoxContainer/HBoxContainer2/Cooldown Spinbox" to="." method="_on_cooldown_changed"]
 [connection signal="value_changed" from="VBoxContainer/Settings Panel/HBoxContainer/HBoxContainer2/Cooldown Slider" to="." method="_on_cooldown_changed"]
+[connection signal="item_selected" from="VBoxContainer/Settings Panel/HBoxContainer/EaseType Option" to="." method="_on_ease_type_option_item_selected"]

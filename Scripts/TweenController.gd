@@ -1,15 +1,16 @@
 extends Node
 
-signal begin_tween(time)
+signal begin_tween(time: float, ease: Tween.EaseType)
 
 @export var cooldown: float = 0.5
 @onready var timer: Timer = $Timer
+var ease_type = Tween.EASE_IN_OUT
 
 func _ready():
 	timer.start()
 
 func _on_timer_timeout():
-	begin_tween.emit(timer.wait_time)
+	begin_tween.emit(timer.wait_time, ease_type)
 	await get_tree().create_timer(cooldown).timeout
 	timer.start()
 
@@ -18,3 +19,6 @@ func set_time(value: float):
 
 func set_cooldown(value: float):
 	cooldown = value
+
+func set_ease(value: Tween.EaseType):
+	ease_type = value

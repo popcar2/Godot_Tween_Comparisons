@@ -24,9 +24,10 @@ var cycle = true
 func _ready():
 	tween_controller.begin_tween.connect(activate_tweens)
 	
-func activate_tweens(time: float):
+func activate_tweens(time: float, ease_type: Tween.EaseType):
 	var tween: Tween = get_tree().create_tween()
 	tween.set_parallel(true)
+	tween.set_ease(ease_type)
 	
 	if cycle:
 		tween.tween_property(linear_sprite, "position", Vector2(END_X, linear_sprite.position.y), time).set_trans(Tween.TRANS_LINEAR)
@@ -62,3 +63,11 @@ func _on_cooldown_changed(value: float):
 	tween_controller.set_cooldown(value)
 	cooldown_slider.value = value
 	cooldown_spinbox.value = value
+
+
+func _on_ease_type_option_item_selected(index: int):
+	match index:
+		0: tween_controller.set_ease(Tween.EASE_IN)
+		1: tween_controller.set_ease(Tween.EASE_OUT)
+		2: tween_controller.set_ease(Tween.EASE_IN_OUT)
+		3: tween_controller.set_ease(Tween.EASE_OUT_IN)
