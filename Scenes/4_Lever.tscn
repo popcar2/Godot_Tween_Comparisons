@@ -1,23 +1,17 @@
-[gd_scene load_steps=9 format=3 uid="uid://b5rlgjdu2s8ip"]
+[gd_scene load_steps=8 format=3 uid="uid://v0rgmdi245n8"]
 
 [ext_resource type="Script" path="res://Scripts/SceneController.gd" id="1_27sjr"]
 [ext_resource type="Theme" uid="uid://dt4b5okf4yefr" path="res://Themes/DefaultTheme.tres" id="1_fuvbk"]
 [ext_resource type="Script" path="res://Scripts/TweenResource.gd" id="2_buelr"]
-[ext_resource type="Texture2D" uid="uid://cw1odgwiyb7mt" path="res://Art/Lever_Handle.png" id="3_b1dbc"]
+[ext_resource type="Texture2D" uid="uid://doey4pdk8u8a5" path="res://Art/Lever_Handle.png" id="3_b1dbc"]
 [ext_resource type="Texture2D" uid="uid://cmnrsn6iriliq" path="res://Art/Lever_Base.png" id="4_ckv7f"]
 [ext_resource type="Script" path="res://Scripts/SceneChanger.gd" id="4_jgrae"]
 
 [sub_resource type="Resource" id="Resource_rbltn"]
 script = ExtResource("2_buelr")
 tweened_property = "rotation_degrees"
-tween_from = -40.0
-tween_to = 40.0
-
-[sub_resource type="Resource" id="Resource_ugg8s"]
-script = ExtResource("2_buelr")
-tweened_property = "position:x"
-tween_from = 250.0
-tween_to = 324.0
+tween_from = -50.0
+tween_to = 50.0
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -28,7 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_fuvbk")
 script = ExtResource("1_27sjr")
-tween_resources = Array[ExtResource("2_buelr")]([SubResource("Resource_rbltn"), SubResource("Resource_ugg8s")])
+tween_resources = Array[ExtResource("2_buelr")]([SubResource("Resource_rbltn")])
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -63,10 +57,11 @@ horizontal_alignment = 1
 
 [node name="Linear Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Linear Panel"]
 unique_name_in_owner = true
-position = Vector2(250, 75)
-rotation = -0.698132
-scale = Vector2(0.5, 0.5)
+position = Vector2(287, 110)
+rotation = -0.785398
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("3_b1dbc")
+offset = Vector2(0, -128)
 
 [node name="Lever Base" type="Sprite2D" parent="VBoxContainer/GridContainer/Linear Panel"]
 position = Vector2(287, 101)
@@ -93,10 +88,11 @@ horizontal_alignment = 1
 
 [node name="Sine Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Sine Panel"]
 unique_name_in_owner = true
-position = Vector2(250, 75)
+position = Vector2(287, 110)
 rotation = -0.698132
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("3_b1dbc")
+offset = Vector2(0, -128)
 
 [node name="Lever Base" type="Sprite2D" parent="VBoxContainer/GridContainer/Sine Panel"]
 position = Vector2(287, 101)
@@ -123,10 +119,11 @@ horizontal_alignment = 1
 
 [node name="Quad Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Quad Panel"]
 unique_name_in_owner = true
-position = Vector2(250, 75)
-rotation = -0.698132
-scale = Vector2(0.5, 0.5)
+position = Vector2(287, 110)
+rotation = -0.785398
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("3_b1dbc")
+offset = Vector2(0, -128)
 
 [node name="Lever Base" type="Sprite2D" parent="VBoxContainer/GridContainer/Quad Panel"]
 position = Vector2(287, 101)
@@ -153,10 +150,11 @@ horizontal_alignment = 1
 
 [node name="Cubic Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Cubic Panel"]
 unique_name_in_owner = true
-position = Vector2(250, 75)
-rotation = -0.698132
-scale = Vector2(0.5, 0.5)
+position = Vector2(287, 110)
+rotation = -0.785398
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("3_b1dbc")
+offset = Vector2(0, -128)
 
 [node name="Lever Base" type="Sprite2D" parent="VBoxContainer/GridContainer/Cubic Panel"]
 position = Vector2(287, 101)
@@ -183,10 +181,11 @@ horizontal_alignment = 1
 
 [node name="Quart Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Quart Panel"]
 unique_name_in_owner = true
-position = Vector2(250, 75)
-rotation = -0.698132
-scale = Vector2(0.5, 0.5)
+position = Vector2(287, 110)
+rotation = -0.785398
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("3_b1dbc")
+offset = Vector2(0, -128)
 
 [node name="Lever Base" type="Sprite2D" parent="VBoxContainer/GridContainer/Quart Panel"]
 position = Vector2(287, 101)
@@ -213,10 +212,11 @@ horizontal_alignment = 1
 
 [node name="Quint Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Quint Panel"]
 unique_name_in_owner = true
-position = Vector2(250, 75)
-rotation = -0.698132
-scale = Vector2(0.5, 0.5)
+position = Vector2(287, 110)
+rotation = -0.785398
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("3_b1dbc")
+offset = Vector2(0, -128)
 
 [node name="Lever Base" type="Sprite2D" parent="VBoxContainer/GridContainer/Quint Panel"]
 position = Vector2(287, 101)
@@ -243,10 +243,11 @@ horizontal_alignment = 1
 
 [node name="Expo Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Expo Panel"]
 unique_name_in_owner = true
-position = Vector2(250, 75)
-rotation = -0.698132
-scale = Vector2(0.5, 0.5)
+position = Vector2(287, 110)
+rotation = -0.785398
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("3_b1dbc")
+offset = Vector2(0, -128)
 
 [node name="Lever Base" type="Sprite2D" parent="VBoxContainer/GridContainer/Expo Panel"]
 position = Vector2(287, 101)
@@ -273,10 +274,11 @@ horizontal_alignment = 1
 
 [node name="Elastic Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Elastic Panel"]
 unique_name_in_owner = true
-position = Vector2(250, 75)
-rotation = -0.698132
-scale = Vector2(0.5, 0.5)
+position = Vector2(287, 110)
+rotation = -0.785398
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("3_b1dbc")
+offset = Vector2(0, -128)
 
 [node name="Lever Base" type="Sprite2D" parent="VBoxContainer/GridContainer/Elastic Panel"]
 position = Vector2(287, 101)
@@ -303,10 +305,11 @@ horizontal_alignment = 1
 
 [node name="Bounce Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Bounce Panel"]
 unique_name_in_owner = true
-position = Vector2(250, 75)
-rotation = -0.698132
-scale = Vector2(0.5, 0.5)
+position = Vector2(287, 110)
+rotation = -0.785398
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("3_b1dbc")
+offset = Vector2(0, -128)
 
 [node name="Lever Base" type="Sprite2D" parent="VBoxContainer/GridContainer/Bounce Panel"]
 position = Vector2(287, 101)
@@ -333,10 +336,11 @@ horizontal_alignment = 1
 
 [node name="Back Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Back Panel"]
 unique_name_in_owner = true
-position = Vector2(250, 75)
-rotation = -0.698132
-scale = Vector2(0.5, 0.5)
+position = Vector2(287, 110)
+rotation = -0.785398
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("3_b1dbc")
+offset = Vector2(0, -128)
 
 [node name="Lever Base" type="Sprite2D" parent="VBoxContainer/GridContainer/Back Panel"]
 position = Vector2(287, 101)
