@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=12 format=3 uid="uid://dt4b5okf4yefr"]
+[gd_resource type="Theme" load_steps=14 format=3 uid="uid://dt4b5okf4yefr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_112p1"]
 bg_color = Color(0, 0, 0, 0.235294)
@@ -92,6 +92,21 @@ corner_radius_bottom_left = 5
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rac15"]
 bg_color = Color(0.0509804, 0.0980392, 0.168627, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wl7ed"]
+bg_color = Color(0.027451, 0.431373, 0.321569, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m1o3f"]
+bg_color = Color(0, 0.207843, 0.14902, 1)
+border_color = Color(0.54902, 1, 0.831373, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [resource]
 default_font_size = 18
 Button/styles/disabled = SubResource("StyleBoxFlat_112p1")
@@ -105,3 +120,5 @@ HSlider/styles/slider = SubResource("StyleBoxFlat_nvxfo")
 LineEdit/styles/focus = SubResource("StyleBoxFlat_oi2k1")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_u0dks")
 Panel/styles/panel = SubResource("StyleBoxFlat_rac15")
+PopupMenu/styles/hover = SubResource("StyleBoxFlat_wl7ed")
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_m1o3f")
