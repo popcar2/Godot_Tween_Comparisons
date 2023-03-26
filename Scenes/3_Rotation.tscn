@@ -312,6 +312,7 @@ step = 0.1
 value = 1.0
 alignment = 1
 update_on_text_changed = true
+select_all_on_focus = true
 
 [node name="Time Slider" type="HSlider" parent="VBoxContainer/Settings Panel/HBoxContainer/Time Settings"]
 unique_name_in_owner = true
@@ -343,6 +344,7 @@ step = 0.1
 value = 0.5
 alignment = 1
 update_on_text_changed = true
+select_all_on_focus = true
 
 [node name="Cooldown Slider" type="HSlider" parent="VBoxContainer/Settings Panel/HBoxContainer/Cooldown Settings"]
 unique_name_in_owner = true
