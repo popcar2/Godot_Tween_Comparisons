@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://vy6pcusn1kvd"]
+[gd_scene load_steps=8 format=3 uid="uid://drsmy4jmas1nu"]
 
 [ext_resource type="Script" path="res://Scripts/SceneController.gd" id="1_snjd5"]
+[ext_resource type="Theme" uid="uid://dt4b5okf4yefr" path="res://Themes/DefaultTheme.tres" id="1_ybpg8"]
 [ext_resource type="Script" path="res://Scripts/TweenResource.gd" id="2_b4isq"]
 [ext_resource type="Texture2D" uid="uid://d2427qhw4k0m6" path="res://icon.svg" id="2_chkff"]
 [ext_resource type="Script" path="res://Scripts/SceneChanger.gd" id="4_5qi3v"]
@@ -24,6 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_ybpg8")
 script = ExtResource("1_snjd5")
 tween_resources = Array[ExtResource("2_b4isq")]([SubResource("Resource_djoal"), SubResource("Resource_vbfmh")])
 
@@ -58,7 +60,7 @@ horizontal_alignment = 1
 [node name="Linear Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Linear Panel"]
 unique_name_in_owner = true
 position = Vector2(287, 59)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_chkff")
 
 [node name="Sine Panel" type="Panel" parent="VBoxContainer/GridContainer"]
@@ -79,7 +81,7 @@ horizontal_alignment = 1
 [node name="Sine Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Sine Panel"]
 unique_name_in_owner = true
 position = Vector2(287, 59)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_chkff")
 
 [node name="Quad Panel" type="Panel" parent="VBoxContainer/GridContainer"]
@@ -100,7 +102,7 @@ horizontal_alignment = 1
 [node name="Quad Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Quad Panel"]
 unique_name_in_owner = true
 position = Vector2(287, 59)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_chkff")
 
 [node name="Cubic Panel" type="Panel" parent="VBoxContainer/GridContainer"]
@@ -121,7 +123,7 @@ horizontal_alignment = 1
 [node name="Cubic Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Cubic Panel"]
 unique_name_in_owner = true
 position = Vector2(287, 59)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_chkff")
 
 [node name="Quart Panel" type="Panel" parent="VBoxContainer/GridContainer"]
@@ -142,7 +144,7 @@ horizontal_alignment = 1
 [node name="Quart Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Quart Panel"]
 unique_name_in_owner = true
 position = Vector2(287, 59)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_chkff")
 
 [node name="Quint Panel" type="Panel" parent="VBoxContainer/GridContainer"]
@@ -163,7 +165,7 @@ horizontal_alignment = 1
 [node name="Quint Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Quint Panel"]
 unique_name_in_owner = true
 position = Vector2(287, 59)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_chkff")
 
 [node name="Expo Panel" type="Panel" parent="VBoxContainer/GridContainer"]
@@ -184,7 +186,7 @@ horizontal_alignment = 1
 [node name="Expo Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Expo Panel"]
 unique_name_in_owner = true
 position = Vector2(287, 59)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_chkff")
 
 [node name="Elastic Panel" type="Panel" parent="VBoxContainer/GridContainer"]
@@ -205,7 +207,7 @@ horizontal_alignment = 1
 [node name="Elastic Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Elastic Panel"]
 unique_name_in_owner = true
 position = Vector2(287, 59)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_chkff")
 
 [node name="Bounce Panel" type="Panel" parent="VBoxContainer/GridContainer"]
@@ -226,7 +228,7 @@ horizontal_alignment = 1
 [node name="Bounce Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Bounce Panel"]
 unique_name_in_owner = true
 position = Vector2(287, 59)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_chkff")
 
 [node name="Back Panel" type="Panel" parent="VBoxContainer/GridContainer"]
@@ -247,7 +249,7 @@ horizontal_alignment = 1
 [node name="Back Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Back Panel"]
 unique_name_in_owner = true
 position = Vector2(287, 59)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_chkff")
 
 [node name="Settings Panel" type="Panel" parent="VBoxContainer"]
@@ -284,6 +286,7 @@ layout_mode = 2
 min_value = 0.1
 step = 0.1
 value = 1.0
+alignment = 1
 update_on_text_changed = true
 
 [node name="Time Slider" type="HSlider" parent="VBoxContainer/Settings Panel/HBoxContainer/Time Settings"]
@@ -314,6 +317,7 @@ unique_name_in_owner = true
 layout_mode = 2
 step = 0.1
 value = 0.5
+alignment = 1
 update_on_text_changed = true
 
 [node name="Cooldown Slider" type="HSlider" parent="VBoxContainer/Settings Panel/HBoxContainer/Cooldown Settings"]
