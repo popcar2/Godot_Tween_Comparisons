@@ -1,4 +1,4 @@
-# Godot Tween Comparisons
+# Godot Tween Comparisons | [Try it on the web!](https://popcar2.itch.io/tweens-comparison)
 ![A gif showcasing the project. It shows different comparisons of various Tween types](Images/Tween_Comparison_Project.gif)
 
 This project is a collection of simple scenes to compare different tween types! You can change the speed, ease type, and cooldown
