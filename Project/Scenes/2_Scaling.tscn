@@ -353,10 +353,12 @@ prev_scene = "1_Movement"
 next_scene = "3_Rotation"
 
 [node name="PrevScene Button" type="Button" parent="VBoxContainer/Settings Panel/HBoxContainer/Scene Change Arrows"]
+custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 text = "<"
 
 [node name="NextScene Button" type="Button" parent="VBoxContainer/Settings Panel/HBoxContainer/Scene Change Arrows"]
+custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 text = ">"
 

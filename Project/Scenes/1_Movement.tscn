@@ -376,10 +376,12 @@ script = ExtResource("4_jtq72")
 next_scene = "2_Scaling"
 
 [node name="PrevScene Button" type="Button" parent="VBoxContainer/Settings Panel/HBoxContainer/Scene Arrows"]
+custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 text = "<"
 
 [node name="NextScene Button" type="Button" parent="VBoxContainer/Settings Panel/HBoxContainer/Scene Arrows"]
+custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 text = ">"
 

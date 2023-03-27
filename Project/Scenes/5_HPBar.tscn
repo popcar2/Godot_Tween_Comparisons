@@ -675,12 +675,15 @@ layout_mode = 2
 size_flags_horizontal = 10
 script = ExtResource("5_1cyx2")
 prev_scene = "4_Lever"
+next_scene = "6_Sword"
 
 [node name="PrevScene Button" type="Button" parent="VBoxContainer/Settings Panel/HBoxContainer/Scene Arrows"]
+custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 text = "<"
 
 [node name="NextScene Button" type="Button" parent="VBoxContainer/Settings Panel/HBoxContainer/Scene Arrows"]
+custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 text = ">"
 
