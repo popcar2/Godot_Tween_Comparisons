@@ -291,7 +291,7 @@ grow_vertical = 2
 [node name="Scene Name" type="Label" parent="VBoxContainer/Settings Panel/HBoxContainer"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-text = "Simple Movement"
+text = "Simple Rotation"
 horizontal_alignment = 1
 vertical_alignment = 1
 

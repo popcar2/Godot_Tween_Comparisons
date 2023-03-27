@@ -24,6 +24,10 @@ tween_controller="*res://Singletons/tween_controller.tscn"
 
 window/stretch/mode="canvas_items"
 
+[filesystem]
+
+import/blender/enabled=false
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
