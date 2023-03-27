@@ -23,7 +23,7 @@ var cycle = true
 
 func _ready():
 	tween_controller.begin_tween.connect(activate_tweens)
-	tween_controller.reset_timer()
+	tween_controller.reset()
 	
 	# update settings
 	time_spinbox.value = tween_controller.get_time()

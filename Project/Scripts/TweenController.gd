@@ -4,6 +4,7 @@ signal begin_tween(time: float, ease: Tween.EaseType)
 
 @export var cooldown: float = 0.5
 @onready var timer: Timer = $Timer
+@onready var reset_timer: Timer = $"Reset Timer"
 var ease_type = Tween.EASE_IN_OUT
 
 func _ready():
@@ -32,7 +33,6 @@ func set_ease(value: Tween.EaseType):
 func get_ease():
 	return ease_type
 
-func reset_timer():
+func reset():
 	timer.stop()
-	await get_tree().create_timer(0.5).timeout
-	_on_timer_timeout()
+	reset_timer.start()

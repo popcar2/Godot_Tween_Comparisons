@@ -8,4 +8,9 @@ script = ExtResource("1_xbff7")
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
+[node name="Reset Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Reset Timer" to="." method="_on_timer_timeout"]
