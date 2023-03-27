@@ -31,3 +31,8 @@ func set_ease(value: Tween.EaseType):
 
 func get_ease():
 	return ease_type
+
+func reset_timer():
+	timer.stop()
+	await get_tree().create_timer(0.5).timeout
+	_on_timer_timeout()
