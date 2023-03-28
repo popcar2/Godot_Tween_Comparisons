@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bt6pkbo3mdxgt"]
+[gd_scene load_steps=8 format=3 uid="uid://bt6pkbo3mdxgt"]
 
 [ext_resource type="Theme" uid="uid://dt4b5okf4yefr" path="res://Themes/DefaultTheme.tres" id="1_bd402"]
 [ext_resource type="Texture2D" uid="uid://d2427qhw4k0m6" path="res://icon.svg" id="1_cpc7k"]
 [ext_resource type="Script" path="res://Scripts/SceneController.gd" id="1_t818r"]
 [ext_resource type="Script" path="res://Scripts/TweenResource.gd" id="2_baxib"]
+[ext_resource type="Script" path="res://Scripts/PanelDisabler.gd" id="4_fnh0k"]
 [ext_resource type="Script" path="res://Scripts/SceneChanger.gd" id="4_jtq72"]
 
 [sub_resource type="Resource" id="Resource_rbltn"]
@@ -40,6 +41,7 @@ columns = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("4_fnh0k")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Linear Panel"]
 layout_mode = 1
@@ -64,6 +66,7 @@ texture = ExtResource("1_cpc7k")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("4_fnh0k")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Sine Panel"]
 layout_mode = 1
@@ -88,6 +91,7 @@ texture = ExtResource("1_cpc7k")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("4_fnh0k")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quad Panel"]
 layout_mode = 1
@@ -112,6 +116,7 @@ texture = ExtResource("1_cpc7k")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("4_fnh0k")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Cubic Panel"]
 layout_mode = 1
@@ -136,6 +141,7 @@ texture = ExtResource("1_cpc7k")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("4_fnh0k")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quart Panel"]
 layout_mode = 1
@@ -160,6 +166,7 @@ texture = ExtResource("1_cpc7k")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("4_fnh0k")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quint Panel"]
 layout_mode = 1
@@ -184,6 +191,7 @@ texture = ExtResource("1_cpc7k")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("4_fnh0k")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Expo Panel"]
 layout_mode = 1
@@ -208,6 +216,7 @@ texture = ExtResource("1_cpc7k")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("4_fnh0k")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Elastic Panel"]
 layout_mode = 1
@@ -232,6 +241,7 @@ texture = ExtResource("1_cpc7k")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("4_fnh0k")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Bounce Panel"]
 layout_mode = 1
@@ -256,6 +266,7 @@ texture = ExtResource("1_cpc7k")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("4_fnh0k")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Back Panel"]
 layout_mode = 1

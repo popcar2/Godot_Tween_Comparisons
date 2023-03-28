@@ -5,10 +5,13 @@ signal begin_tween(time: float, ease: Tween.EaseType)
 @export var cooldown: float = 0.5
 @onready var timer: Timer = $Timer
 @onready var reset_timer: Timer = $"Reset Timer"
-var ease_type = Tween.EASE_IN_OUT
+var ease_type: Tween.EaseType = Tween.EASE_IN_OUT
+var disabled_tweens: Array[bool]
 
 func _ready():
 	timer.start()
+	disabled_tweens.resize(10)
+	disabled_tweens.fill(false)
 
 func _on_timer_timeout():
 	begin_tween.emit(timer.wait_time, ease_type)
@@ -36,3 +39,9 @@ func get_ease():
 func reset():
 	timer.stop()
 	reset_timer.start()
+
+func set_tween_disabled(disabled: bool, index: int):
+	disabled_tweens[index] = disabled
+
+func get_tween_disabled(index: int):
+	return disabled_tweens[index]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://f16bk5t2kmwt"]
+[gd_scene load_steps=13 format=3 uid="uid://f16bk5t2kmwt"]
 
 [ext_resource type="Theme" uid="uid://dt4b5okf4yefr" path="res://Themes/DefaultTheme.tres" id="1_27qbq"]
 [ext_resource type="Script" path="res://Scripts/SceneController.gd" id="2_bthpg"]
 [ext_resource type="Script" path="res://Scripts/TweenResource.gd" id="3_4dkf2"]
+[ext_resource type="Script" path="res://Scripts/PanelDisabler.gd" id="4_mdfto"]
 [ext_resource type="Texture2D" uid="uid://k5lh6vse52h3" path="res://Art/Sword.png" id="4_v1bm3"]
 [ext_resource type="Script" path="res://Scripts/SceneChanger.gd" id="5_5khbj"]
 [ext_resource type="Texture2D" uid="uid://qdli0ptbxeyy" path="res://Art/Skeleton.png" id="5_yrnmm"]
@@ -54,6 +55,7 @@ columns = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("4_mdfto")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Linear Panel"]
 layout_mode = 1
@@ -99,6 +101,7 @@ shape = SubResource("CapsuleShape2D_0km2n")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("4_mdfto")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Sine Panel"]
 layout_mode = 1
@@ -144,6 +147,7 @@ shape = SubResource("CapsuleShape2D_0km2n")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("4_mdfto")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quad Panel"]
 layout_mode = 1
@@ -189,6 +193,7 @@ shape = SubResource("CapsuleShape2D_0km2n")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("4_mdfto")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Cubic Panel"]
 layout_mode = 1
@@ -234,6 +239,7 @@ shape = SubResource("CapsuleShape2D_0km2n")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("4_mdfto")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quart Panel"]
 layout_mode = 1
@@ -279,6 +285,7 @@ shape = SubResource("CapsuleShape2D_0km2n")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("4_mdfto")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quint Panel"]
 layout_mode = 1
@@ -324,6 +331,7 @@ shape = SubResource("CapsuleShape2D_0km2n")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("4_mdfto")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Expo Panel"]
 layout_mode = 1
@@ -369,6 +377,7 @@ shape = SubResource("CapsuleShape2D_0km2n")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("4_mdfto")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Elastic Panel"]
 layout_mode = 1
@@ -414,6 +423,7 @@ shape = SubResource("CapsuleShape2D_0km2n")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("4_mdfto")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Bounce Panel"]
 layout_mode = 1
@@ -459,6 +469,7 @@ shape = SubResource("CapsuleShape2D_0km2n")
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("4_mdfto")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Back Panel"]
 layout_mode = 1
