@@ -93,61 +93,6 @@ text = "100"
 vertical_alignment = 1
 script = ExtResource("5_hqews")
 
-[node name="Sine Panel" type="Panel" parent="VBoxContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("4_2c02h")
-
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Sine Panel"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
-text = "Sine"
-horizontal_alignment = 1
-
-[node name="Sine Sprite" type="TextureProgressBar" parent="VBoxContainer/GridContainer/Sine Panel"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -128.0
-offset_top = -8.0
-offset_right = 128.0
-offset_bottom = 44.0
-grow_horizontal = 2
-grow_vertical = 2
-value = 100.0
-texture_under = ExtResource("4_0yccy")
-texture_progress = ExtResource("4_0yccy")
-tint_under = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="HP Label" type="Label" parent="VBoxContainer/GridContainer/Sine Panel/Sine Sprite"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 10.0
-offset_top = -18.5
-offset_right = 73.0
-offset_bottom = 18.5
-grow_vertical = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 15
-theme_override_font_sizes/font_size = 24
-text = "100"
-vertical_alignment = 1
-script = ExtResource("5_hqews")
-
 [node name="Quad Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -187,6 +132,61 @@ texture_progress = ExtResource("4_0yccy")
 tint_under = Color(0.172549, 0.172549, 0.172549, 1)
 
 [node name="HP Label" type="Label" parent="VBoxContainer/GridContainer/Quad Panel/Quad Sprite"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 10.0
+offset_top = -18.5
+offset_right = 73.0
+offset_bottom = 18.5
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 15
+theme_override_font_sizes/font_size = 24
+text = "100"
+vertical_alignment = 1
+script = ExtResource("5_hqews")
+
+[node name="Sine Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("4_2c02h")
+
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Sine Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Sine"
+horizontal_alignment = 1
+
+[node name="Sine Sprite" type="TextureProgressBar" parent="VBoxContainer/GridContainer/Sine Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -8.0
+offset_right = 128.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+value = 100.0
+texture_under = ExtResource("4_0yccy")
+texture_progress = ExtResource("4_0yccy")
+tint_under = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="HP Label" type="Label" parent="VBoxContainer/GridContainer/Sine Panel/Sine Sprite"]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -258,6 +258,61 @@ text = "100"
 vertical_alignment = 1
 script = ExtResource("5_hqews")
 
+[node name="Back Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("4_2c02h")
+
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Back Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Back"
+horizontal_alignment = 1
+
+[node name="Back Sprite" type="TextureProgressBar" parent="VBoxContainer/GridContainer/Back Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -8.0
+offset_right = 128.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+value = 100.0
+texture_under = ExtResource("4_0yccy")
+texture_progress = ExtResource("4_0yccy")
+tint_under = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="HP Label" type="Label" parent="VBoxContainer/GridContainer/Back Panel/Back Sprite"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 10.0
+offset_top = -18.5
+offset_right = 73.0
+offset_bottom = 18.5
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 15
+theme_override_font_sizes/font_size = 24
+text = "100"
+vertical_alignment = 1
+script = ExtResource("5_hqews")
+
 [node name="Quart Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -297,116 +352,6 @@ texture_progress = ExtResource("4_0yccy")
 tint_under = Color(0.172549, 0.172549, 0.172549, 1)
 
 [node name="HP Label" type="Label" parent="VBoxContainer/GridContainer/Quart Panel/Quart Sprite"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 10.0
-offset_top = -18.5
-offset_right = 73.0
-offset_bottom = 18.5
-grow_vertical = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 15
-theme_override_font_sizes/font_size = 24
-text = "100"
-vertical_alignment = 1
-script = ExtResource("5_hqews")
-
-[node name="Quint Panel" type="Panel" parent="VBoxContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("4_2c02h")
-
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quint Panel"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
-text = "Quintic"
-horizontal_alignment = 1
-
-[node name="Quint Sprite" type="TextureProgressBar" parent="VBoxContainer/GridContainer/Quint Panel"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -128.0
-offset_top = -8.0
-offset_right = 128.0
-offset_bottom = 44.0
-grow_horizontal = 2
-grow_vertical = 2
-value = 100.0
-texture_under = ExtResource("4_0yccy")
-texture_progress = ExtResource("4_0yccy")
-tint_under = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="HP Label" type="Label" parent="VBoxContainer/GridContainer/Quint Panel/Quint Sprite"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 10.0
-offset_top = -18.5
-offset_right = 73.0
-offset_bottom = 18.5
-grow_vertical = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 15
-theme_override_font_sizes/font_size = 24
-text = "100"
-vertical_alignment = 1
-script = ExtResource("5_hqews")
-
-[node name="Expo Panel" type="Panel" parent="VBoxContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("4_2c02h")
-
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Expo Panel"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
-text = "Exponential"
-horizontal_alignment = 1
-
-[node name="Expo Sprite" type="TextureProgressBar" parent="VBoxContainer/GridContainer/Expo Panel"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -128.0
-offset_top = -8.0
-offset_right = 128.0
-offset_bottom = 44.0
-grow_horizontal = 2
-grow_vertical = 2
-value = 100.0
-texture_under = ExtResource("4_0yccy")
-texture_progress = ExtResource("4_0yccy")
-tint_under = Color(0.172549, 0.172549, 0.172549, 1)
-
-[node name="HP Label" type="Label" parent="VBoxContainer/GridContainer/Expo Panel/Expo Sprite"]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -478,6 +423,61 @@ text = "100"
 vertical_alignment = 1
 script = ExtResource("5_hqews")
 
+[node name="Quint Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("4_2c02h")
+
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quint Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Quintic"
+horizontal_alignment = 1
+
+[node name="Quint Sprite" type="TextureProgressBar" parent="VBoxContainer/GridContainer/Quint Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -8.0
+offset_right = 128.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+value = 100.0
+texture_under = ExtResource("4_0yccy")
+texture_progress = ExtResource("4_0yccy")
+tint_under = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="HP Label" type="Label" parent="VBoxContainer/GridContainer/Quint Panel/Quint Sprite"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 10.0
+offset_top = -18.5
+offset_right = 73.0
+offset_bottom = 18.5
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 15
+theme_override_font_sizes/font_size = 24
+text = "100"
+vertical_alignment = 1
+script = ExtResource("5_hqews")
+
 [node name="Bounce Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -533,13 +533,13 @@ text = "100"
 vertical_alignment = 1
 script = ExtResource("5_hqews")
 
-[node name="Back Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+[node name="Expo Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("4_2c02h")
 
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Back Panel"]
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Expo Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -549,10 +549,10 @@ offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 32
-text = "Back"
+text = "Exponential"
 horizontal_alignment = 1
 
-[node name="Back Sprite" type="TextureProgressBar" parent="VBoxContainer/GridContainer/Back Panel"]
+[node name="Expo Sprite" type="TextureProgressBar" parent="VBoxContainer/GridContainer/Expo Panel"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
@@ -571,7 +571,7 @@ texture_under = ExtResource("4_0yccy")
 texture_progress = ExtResource("4_0yccy")
 tint_under = Color(0.172549, 0.172549, 0.172549, 1)
 
-[node name="HP Label" type="Label" parent="VBoxContainer/GridContainer/Back Panel/Back Sprite"]
+[node name="HP Label" type="Label" parent="VBoxContainer/GridContainer/Expo Panel/Expo Sprite"]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -699,15 +699,15 @@ layout_mode = 2
 text = ">"
 
 [connection signal="value_changed" from="VBoxContainer/GridContainer/Linear Panel/Linear Sprite" to="VBoxContainer/GridContainer/Linear Panel/Linear Sprite/HP Label" method="_on_value_changed"]
-[connection signal="value_changed" from="VBoxContainer/GridContainer/Sine Panel/Sine Sprite" to="VBoxContainer/GridContainer/Sine Panel/Sine Sprite/HP Label" method="_on_value_changed"]
 [connection signal="value_changed" from="VBoxContainer/GridContainer/Quad Panel/Quad Sprite" to="VBoxContainer/GridContainer/Quad Panel/Quad Sprite/HP Label" method="_on_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/GridContainer/Sine Panel/Sine Sprite" to="VBoxContainer/GridContainer/Sine Panel/Sine Sprite/HP Label" method="_on_value_changed"]
 [connection signal="value_changed" from="VBoxContainer/GridContainer/Cubic Panel/Cubic Sprite" to="VBoxContainer/GridContainer/Cubic Panel/Cubic Sprite/HP Label" method="_on_value_changed"]
-[connection signal="value_changed" from="VBoxContainer/GridContainer/Quart Panel/Quart Sprite" to="VBoxContainer/GridContainer/Quart Panel/Quart Sprite/HP Label" method="_on_value_changed"]
-[connection signal="value_changed" from="VBoxContainer/GridContainer/Quint Panel/Quint Sprite" to="VBoxContainer/GridContainer/Quint Panel/Quint Sprite/HP Label" method="_on_value_changed"]
-[connection signal="value_changed" from="VBoxContainer/GridContainer/Expo Panel/Expo Sprite" to="VBoxContainer/GridContainer/Expo Panel/Expo Sprite/HP Label" method="_on_value_changed"]
-[connection signal="value_changed" from="VBoxContainer/GridContainer/Elastic Panel/Elastic Sprite" to="VBoxContainer/GridContainer/Elastic Panel/Elastic Sprite/HP Label" method="_on_value_changed"]
-[connection signal="value_changed" from="VBoxContainer/GridContainer/Bounce Panel/Bounce Sprite" to="VBoxContainer/GridContainer/Bounce Panel/Bounce Sprite/HP Label" method="_on_value_changed"]
 [connection signal="value_changed" from="VBoxContainer/GridContainer/Back Panel/Back Sprite" to="VBoxContainer/GridContainer/Back Panel/Back Sprite/HP Label" method="_on_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/GridContainer/Quart Panel/Quart Sprite" to="VBoxContainer/GridContainer/Quart Panel/Quart Sprite/HP Label" method="_on_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/GridContainer/Elastic Panel/Elastic Sprite" to="VBoxContainer/GridContainer/Elastic Panel/Elastic Sprite/HP Label" method="_on_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/GridContainer/Quint Panel/Quint Sprite" to="VBoxContainer/GridContainer/Quint Panel/Quint Sprite/HP Label" method="_on_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/GridContainer/Bounce Panel/Bounce Sprite" to="VBoxContainer/GridContainer/Bounce Panel/Bounce Sprite/HP Label" method="_on_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/GridContainer/Expo Panel/Expo Sprite" to="VBoxContainer/GridContainer/Expo Panel/Expo Sprite/HP Label" method="_on_value_changed"]
 [connection signal="value_changed" from="VBoxContainer/Settings Panel/HBoxContainer/Time Settings/Time Spinbox" to="." method="_on_time_changed"]
 [connection signal="value_changed" from="VBoxContainer/Settings Panel/HBoxContainer/Time Settings/Time Slider" to="." method="_on_time_changed"]
 [connection signal="value_changed" from="VBoxContainer/Settings Panel/HBoxContainer/Cooldown Settings/Cooldown Spinbox" to="." method="_on_cooldown_changed"]

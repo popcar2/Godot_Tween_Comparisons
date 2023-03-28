@@ -19,7 +19,7 @@ func _ready():
 	mouse_exited.connect(_on_mouse_exited)
 
 func _on_gui_input(event: InputEvent):
-	if event.is_pressed():
+	if event is InputEventMouseButton and event.is_pressed() and event.button_index == 1:
 		toggle_disabled()
 
 func _on_mouse_entered():

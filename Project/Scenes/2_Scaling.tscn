@@ -65,28 +65,6 @@ position = Vector2(287, 59)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_chkff")
 
-[node name="Sine Panel" type="Panel" parent="VBoxContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("4_gpaax")
-
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Sine Panel"]
-layout_mode = 1
-offset_left = 12.0
-offset_top = 12.0
-offset_right = 77.0
-offset_bottom = 60.0
-theme_override_font_sizes/font_size = 32
-text = "Sine"
-horizontal_alignment = 1
-
-[node name="Sine Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Sine Panel"]
-unique_name_in_owner = true
-position = Vector2(287, 59)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("2_chkff")
-
 [node name="Quad Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -104,6 +82,28 @@ text = "Quadratic"
 horizontal_alignment = 1
 
 [node name="Quad Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Quad Panel"]
+unique_name_in_owner = true
+position = Vector2(287, 59)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_chkff")
+
+[node name="Sine Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("4_gpaax")
+
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Sine Panel"]
+layout_mode = 1
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 77.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 32
+text = "Sine"
+horizontal_alignment = 1
+
+[node name="Sine Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Sine Panel"]
 unique_name_in_owner = true
 position = Vector2(287, 59)
 scale = Vector2(0.3, 0.3)
@@ -131,6 +131,28 @@ position = Vector2(287, 59)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_chkff")
 
+[node name="Back Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("4_gpaax")
+
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Back Panel"]
+layout_mode = 1
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 86.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 32
+text = "Back"
+horizontal_alignment = 1
+
+[node name="Back Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Back Panel"]
+unique_name_in_owner = true
+position = Vector2(287, 59)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_chkff")
+
 [node name="Quart Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -148,50 +170,6 @@ text = "Quartic"
 horizontal_alignment = 1
 
 [node name="Quart Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Quart Panel"]
-unique_name_in_owner = true
-position = Vector2(287, 59)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("2_chkff")
-
-[node name="Quint Panel" type="Panel" parent="VBoxContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("4_gpaax")
-
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quint Panel"]
-layout_mode = 1
-offset_left = 12.0
-offset_top = 12.0
-offset_right = 124.0
-offset_bottom = 60.0
-theme_override_font_sizes/font_size = 32
-text = "Quintic"
-horizontal_alignment = 1
-
-[node name="Quint Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Quint Panel"]
-unique_name_in_owner = true
-position = Vector2(287, 59)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("2_chkff")
-
-[node name="Expo Panel" type="Panel" parent="VBoxContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("4_gpaax")
-
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Expo Panel"]
-layout_mode = 1
-offset_left = 12.0
-offset_top = 12.0
-offset_right = 196.0
-offset_bottom = 60.0
-theme_override_font_sizes/font_size = 32
-text = "Exponential"
-horizontal_alignment = 1
-
-[node name="Expo Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Expo Panel"]
 unique_name_in_owner = true
 position = Vector2(287, 59)
 scale = Vector2(0.3, 0.3)
@@ -219,6 +197,28 @@ position = Vector2(287, 59)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_chkff")
 
+[node name="Quint Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("4_gpaax")
+
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quint Panel"]
+layout_mode = 1
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 124.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 32
+text = "Quintic"
+horizontal_alignment = 1
+
+[node name="Quint Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Quint Panel"]
+unique_name_in_owner = true
+position = Vector2(287, 59)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_chkff")
+
 [node name="Bounce Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -241,23 +241,23 @@ position = Vector2(287, 59)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_chkff")
 
-[node name="Back Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+[node name="Expo Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("4_gpaax")
 
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Back Panel"]
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Expo Panel"]
 layout_mode = 1
 offset_left = 12.0
 offset_top = 12.0
-offset_right = 86.0
+offset_right = 196.0
 offset_bottom = 60.0
 theme_override_font_sizes/font_size = 32
-text = "Back"
+text = "Exponential"
 horizontal_alignment = 1
 
-[node name="Back Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Back Panel"]
+[node name="Expo Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Expo Panel"]
 unique_name_in_owner = true
 position = Vector2(287, 59)
 scale = Vector2(0.3, 0.3)
