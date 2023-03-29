@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://drpbrqspvgmxs"]
+[gd_scene load_steps=13 format=3 uid="uid://drpbrqspvgmxs"]
 
 [ext_resource type="Theme" uid="uid://dt4b5okf4yefr" path="res://Themes/DefaultTheme.tres" id="1_vy7i1"]
 [ext_resource type="Script" path="res://Scripts/SceneController.gd" id="2_iwwcx"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" path="res://Scripts/PanelDisabler.gd" id="4_ekpul"]
 [ext_resource type="Texture2D" uid="uid://d2427qhw4k0m6" path="res://Art/icon.svg" id="5_ns5am"]
 [ext_resource type="Script" path="res://Scripts/SceneChanger.gd" id="6_idbot"]
+[ext_resource type="Theme" uid="uid://37njnhj3hb8o" path="res://Themes/ShowPanelButton.tres" id="7_6vylu"]
+[ext_resource type="Script" path="res://Scripts/ShowPanelButton.gd" id="8_272of"]
 
 [sub_resource type="Resource" id="Resource_rbltn"]
 script = ExtResource("3_8lgdh")
@@ -18,6 +20,9 @@ bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bip68"]
 bg_color = Color(0.00392157, 0.501961, 0.992157, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_6pm07"]
+variation_embolden = 1.5
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -50,20 +55,6 @@ size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_y4ucf")
 script = ExtResource("4_ekpul")
 
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Linear Panel"]
-z_index = 1
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
-text = "Linear"
-horizontal_alignment = 1
-
 [node name="Linear Sprite" type="Panel" parent="VBoxContainer/GridContainer/Linear Panel"]
 unique_name_in_owner = true
 layout_mode = 1
@@ -80,26 +71,25 @@ position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_ns5am")
 
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Linear Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.5
+offset_right = 48.5
+offset_bottom = 48.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Linear"
+horizontal_alignment = 1
+
 [node name="Quad Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_y4ucf")
 script = ExtResource("4_ekpul")
-
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quad Panel"]
-z_index = 1
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
-text = "Quadratic"
-horizontal_alignment = 1
 
 [node name="Quad Sprite" type="Panel" parent="VBoxContainer/GridContainer/Quad Panel"]
 unique_name_in_owner = true
@@ -117,26 +107,25 @@ position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_ns5am")
 
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quad Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -287.0
+offset_right = 287.0
+offset_bottom = 48.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Quadratic"
+horizontal_alignment = 1
+
 [node name="Sine Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_y4ucf")
 script = ExtResource("4_ekpul")
-
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Sine Panel"]
-z_index = 1
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
-text = "Sine"
-horizontal_alignment = 1
 
 [node name="Sine Sprite" type="Panel" parent="VBoxContainer/GridContainer/Sine Panel"]
 unique_name_in_owner = true
@@ -154,26 +143,25 @@ position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_ns5am")
 
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Sine Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -32.5
+offset_right = 32.5
+offset_bottom = 48.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Sine"
+horizontal_alignment = 1
+
 [node name="Cubic Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_y4ucf")
 script = ExtResource("4_ekpul")
-
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Cubic Panel"]
-z_index = 1
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
-text = "Cubic"
-horizontal_alignment = 1
 
 [node name="Cubic Sprite" type="Panel" parent="VBoxContainer/GridContainer/Cubic Panel"]
 unique_name_in_owner = true
@@ -191,26 +179,25 @@ position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_ns5am")
 
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Cubic Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -42.5
+offset_right = 42.5
+offset_bottom = 48.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Cubic"
+horizontal_alignment = 1
+
 [node name="Back Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_y4ucf")
 script = ExtResource("4_ekpul")
-
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Back Panel"]
-z_index = 1
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
-text = "Back"
-horizontal_alignment = 1
 
 [node name="Back Sprite" type="Panel" parent="VBoxContainer/GridContainer/Back Panel"]
 unique_name_in_owner = true
@@ -228,26 +215,25 @@ position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_ns5am")
 
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Back Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -37.0
+offset_right = 37.0
+offset_bottom = 48.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Back"
+horizontal_alignment = 1
+
 [node name="Quart Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_y4ucf")
 script = ExtResource("4_ekpul")
-
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quart Panel"]
-z_index = 1
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
-text = "Quartic"
-horizontal_alignment = 1
 
 [node name="Quart Sprite" type="Panel" parent="VBoxContainer/GridContainer/Quart Panel"]
 unique_name_in_owner = true
@@ -265,26 +251,25 @@ position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_ns5am")
 
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quart Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -58.0
+offset_right = 58.0
+offset_bottom = 48.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Quartic"
+horizontal_alignment = 1
+
 [node name="Elastic Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_y4ucf")
 script = ExtResource("4_ekpul")
-
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Elastic Panel"]
-z_index = 1
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
-text = "Elastic"
-horizontal_alignment = 1
 
 [node name="Elastic Sprite" type="Panel" parent="VBoxContainer/GridContainer/Elastic Panel"]
 unique_name_in_owner = true
@@ -302,26 +287,25 @@ position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_ns5am")
 
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Elastic Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_right = 50.0
+offset_bottom = 48.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Elastic"
+horizontal_alignment = 1
+
 [node name="Quint Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_y4ucf")
 script = ExtResource("4_ekpul")
-
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quint Panel"]
-z_index = 1
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
-text = "Quintic"
-horizontal_alignment = 1
 
 [node name="Quint Sprite" type="Panel" parent="VBoxContainer/GridContainer/Quint Panel"]
 unique_name_in_owner = true
@@ -339,26 +323,25 @@ position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_ns5am")
 
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quint Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -56.0
+offset_right = 56.0
+offset_bottom = 48.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Quintic"
+horizontal_alignment = 1
+
 [node name="Bounce Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_y4ucf")
 script = ExtResource("4_ekpul")
-
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Bounce Panel"]
-z_index = 1
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
-text = "Bounce"
-horizontal_alignment = 1
 
 [node name="Bounce Sprite" type="Panel" parent="VBoxContainer/GridContainer/Bounce Panel"]
 unique_name_in_owner = true
@@ -376,26 +359,25 @@ position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_ns5am")
 
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Bounce Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -57.5
+offset_right = 57.5
+offset_bottom = 48.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Bounce"
+horizontal_alignment = 1
+
 [node name="Expo Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_y4ucf")
 script = ExtResource("4_ekpul")
-
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Expo Panel"]
-z_index = 1
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
-text = "Exponential"
-horizontal_alignment = 1
 
 [node name="Expo Sprite" type="Panel" parent="VBoxContainer/GridContainer/Expo Panel"]
 unique_name_in_owner = true
@@ -412,6 +394,19 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_bip68")
 position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_ns5am")
+
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Expo Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -92.0
+offset_right = 92.0
+offset_bottom = 48.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Exponential"
+horizontal_alignment = 1
 
 [node name="Settings Panel" type="Panel" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 40)
@@ -521,6 +516,61 @@ text = "<"
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 text = ">"
+
+[node name="Circ Panel" type="Panel" parent="."]
+offset_left = -574.0
+offset_top = 487.0
+offset_bottom = 604.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_y4ucf")
+script = ExtResource("4_ekpul")
+
+[node name="Circ Sprite" type="Panel" parent="Circ Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_bip68")
+
+[node name="Sprite2D" type="Sprite2D" parent="Circ Panel/Circ Sprite"]
+position = Vector2(287, 80)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_ns5am")
+
+[node name="Transition Name" type="Label" parent="Circ Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.5
+offset_right = 48.5
+offset_bottom = 48.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Circular"
+horizontal_alignment = 1
+
+[node name="Show Panel Button" type="Button" parent="Circ Panel"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -30.0
+offset_right = 25.0
+offset_bottom = 30.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("7_6vylu")
+theme_override_fonts/font = SubResource("FontVariation_6pm07")
+text = ">"
+script = ExtResource("8_272of")
 
 [connection signal="value_changed" from="VBoxContainer/Settings Panel/HBoxContainer/Time Settings/Time Spinbox" to="." method="_on_time_changed"]
 [connection signal="value_changed" from="VBoxContainer/Settings Panel/HBoxContainer/Time Settings/Time Slider" to="." method="_on_time_changed"]

@@ -36,7 +36,7 @@ func toggle_disabled():
 		var label: Label = disabled_label.instantiate()
 		add_child(label)
 		for child in get_children():
-			if not child is Label:
+			if not (child is Label or child is Button):
 				child.visibility_layer = 0
 	else:
 		modulate = Color8(300, 300, 300)

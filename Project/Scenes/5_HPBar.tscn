@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c68gmjjv5fvyy"]
+[gd_scene load_steps=12 format=3 uid="uid://c68gmjjv5fvyy"]
 
 [ext_resource type="Theme" uid="uid://dt4b5okf4yefr" path="res://Themes/DefaultTheme.tres" id="1_spfi2"]
 [ext_resource type="Script" path="res://Scripts/SceneController.gd" id="2_0o8my"]
@@ -7,12 +7,17 @@
 [ext_resource type="Script" path="res://Scripts/PanelDisabler.gd" id="4_2c02h"]
 [ext_resource type="Script" path="res://Scripts/SceneChanger.gd" id="5_1cyx2"]
 [ext_resource type="Script" path="res://Scripts/UpdateLabel.gd" id="5_hqews"]
+[ext_resource type="Theme" uid="uid://37njnhj3hb8o" path="res://Themes/ShowPanelButton.tres" id="8_gwtxy"]
+[ext_resource type="Script" path="res://Scripts/ShowPanelButton.gd" id="9_4rq36"]
 
 [sub_resource type="Resource" id="Resource_rbltn"]
 script = ExtResource("3_1c8x0")
 tweened_property = "value"
 tween_from = 100.0
 tween_to = 30.0
+
+[sub_resource type="FontVariation" id="FontVariation_2sntl"]
+variation_embolden = 1.5
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -698,6 +703,85 @@ custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 text = ">"
 
+[node name="Circ Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -574.0
+offset_top = -161.0
+offset_bottom = -44.0
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("4_2c02h")
+
+[node name="Show Panel Button" type="Button" parent="Circ Panel"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -30.0
+offset_right = 25.0
+offset_bottom = 30.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("8_gwtxy")
+theme_override_fonts/font = SubResource("FontVariation_2sntl")
+text = ">"
+script = ExtResource("9_4rq36")
+
+[node name="Transition Name" type="Label" parent="Circ Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Circular"
+horizontal_alignment = 1
+
+[node name="Circ Sprite" type="TextureProgressBar" parent="Circ Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -8.0
+offset_right = 128.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+value = 100.0
+texture_under = ExtResource("4_0yccy")
+texture_progress = ExtResource("4_0yccy")
+tint_under = Color(0.172549, 0.172549, 0.172549, 1)
+
+[node name="HP Label" type="Label" parent="Circ Panel/Circ Sprite"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 10.0
+offset_top = -18.5
+offset_right = 73.0
+offset_bottom = 18.5
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 15
+theme_override_font_sizes/font_size = 24
+text = "100"
+vertical_alignment = 1
+script = ExtResource("5_hqews")
+
 [connection signal="value_changed" from="VBoxContainer/GridContainer/Linear Panel/Linear Sprite" to="VBoxContainer/GridContainer/Linear Panel/Linear Sprite/HP Label" method="_on_value_changed"]
 [connection signal="value_changed" from="VBoxContainer/GridContainer/Quad Panel/Quad Sprite" to="VBoxContainer/GridContainer/Quad Panel/Quad Sprite/HP Label" method="_on_value_changed"]
 [connection signal="value_changed" from="VBoxContainer/GridContainer/Sine Panel/Sine Sprite" to="VBoxContainer/GridContainer/Sine Panel/Sine Sprite/HP Label" method="_on_value_changed"]
@@ -715,3 +799,4 @@ text = ">"
 [connection signal="item_selected" from="VBoxContainer/Settings Panel/HBoxContainer/EaseType Option" to="." method="_on_ease_type_option_item_selected"]
 [connection signal="pressed" from="VBoxContainer/Settings Panel/HBoxContainer/Scene Arrows/PrevScene Button" to="VBoxContainer/Settings Panel/HBoxContainer/Scene Arrows" method="_on_prev_scene_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings Panel/HBoxContainer/Scene Arrows/NextScene Button" to="VBoxContainer/Settings Panel/HBoxContainer/Scene Arrows" method="_on_next_scene_button_pressed"]
+[connection signal="value_changed" from="Circ Panel/Circ Sprite" to="Circ Panel/Circ Sprite/HP Label" method="_on_value_changed"]

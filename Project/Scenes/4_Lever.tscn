@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://v0rgmdi245n8"]
+[gd_scene load_steps=12 format=3 uid="uid://v0rgmdi245n8"]
 
 [ext_resource type="Script" path="res://Scripts/SceneController.gd" id="1_27sjr"]
 [ext_resource type="Theme" uid="uid://dt4b5okf4yefr" path="res://Themes/DefaultTheme.tres" id="1_fuvbk"]
@@ -7,12 +7,17 @@
 [ext_resource type="Script" path="res://Scripts/PanelDisabler.gd" id="4_bd1g4"]
 [ext_resource type="Texture2D" uid="uid://cmnrsn6iriliq" path="res://Art/Lever_Base.png" id="4_ckv7f"]
 [ext_resource type="Script" path="res://Scripts/SceneChanger.gd" id="4_jgrae"]
+[ext_resource type="Theme" uid="uid://37njnhj3hb8o" path="res://Themes/ShowPanelButton.tres" id="8_pg2na"]
+[ext_resource type="Script" path="res://Scripts/ShowPanelButton.gd" id="9_frror"]
 
 [sub_resource type="Resource" id="Resource_rbltn"]
 script = ExtResource("2_buelr")
 tweened_property = "rotation_degrees"
 tween_from = -50.0
 tween_to = 50.0
+
+[sub_resource type="FontVariation" id="FontVariation_cpwyx"]
+variation_embolden = 1.5
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -467,6 +472,62 @@ text = "<"
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 text = ">"
+
+[node name="Circ Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -574.0
+offset_top = -161.0
+offset_bottom = -44.0
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("4_bd1g4")
+
+[node name="Show Panel Button" type="Button" parent="Circ Panel"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -30.0
+offset_right = 25.0
+offset_bottom = 30.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("8_pg2na")
+theme_override_fonts/font = SubResource("FontVariation_cpwyx")
+text = ">"
+script = ExtResource("9_frror")
+
+[node name="Transition Name" type="Label" parent="Circ Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Circular"
+horizontal_alignment = 1
+
+[node name="Circ Sprite" type="Sprite2D" parent="Circ Panel"]
+unique_name_in_owner = true
+position = Vector2(287, 110)
+rotation = -0.785398
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_b1dbc")
+offset = Vector2(0, -128)
+
+[node name="Lever Base" type="Sprite2D" parent="Circ Panel"]
+position = Vector2(287, 101)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_ckv7f")
 
 [connection signal="value_changed" from="VBoxContainer/Settings Panel/HBoxContainer/Time Settings/Time Spinbox" to="." method="_on_time_changed"]
 [connection signal="value_changed" from="VBoxContainer/Settings Panel/HBoxContainer/Time Settings/Time Slider" to="." method="_on_time_changed"]

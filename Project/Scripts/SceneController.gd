@@ -10,6 +10,7 @@ extends Control
 @onready var elastic_sprite = %"Elastic Sprite"
 @onready var bounce_sprite = %"Bounce Sprite"
 @onready var back_sprite = %"Back Sprite"
+@onready var circ_sprite = %"Circ Sprite"
 
 @onready var time_spinbox: SpinBox = %"Time Spinbox"
 @onready var time_slider: Slider = %"Time Slider"
@@ -60,6 +61,7 @@ func activate_tweens(time: float, ease_type: Tween.EaseType):
 			tween.tween_property(elastic_sprite, tween_info.tweened_property, tween_info.tween_to, time).set_trans(Tween.TRANS_ELASTIC)
 			tween.tween_property(bounce_sprite, tween_info.tweened_property, tween_info.tween_to, time).set_trans(Tween.TRANS_BOUNCE)
 			tween.tween_property(back_sprite, tween_info.tweened_property, tween_info.tween_to, time).set_trans(Tween.TRANS_BACK)
+			tween.tween_property(circ_sprite, tween_info.tweened_property, tween_info.tween_to, time).set_trans(Tween.TRANS_CIRC)
 		else:
 			tween.tween_property(linear_sprite, tween_info.tweened_property, tween_info.tween_from, time).set_trans(Tween.TRANS_LINEAR)
 			tween.tween_property(sine_sprite, tween_info.tweened_property, tween_info.tween_from, time).set_trans(Tween.TRANS_SINE)
@@ -71,8 +73,8 @@ func activate_tweens(time: float, ease_type: Tween.EaseType):
 			tween.tween_property(elastic_sprite, tween_info.tweened_property, tween_info.tween_from, time).set_trans(Tween.TRANS_ELASTIC)
 			tween.tween_property(bounce_sprite, tween_info.tweened_property, tween_info.tween_from, time).set_trans(Tween.TRANS_BOUNCE)
 			tween.tween_property(back_sprite, tween_info.tweened_property, tween_info.tween_from, time).set_trans(Tween.TRANS_BACK)
+			tween.tween_property(circ_sprite, tween_info.tweened_property, tween_info.tween_from, time).set_trans(Tween.TRANS_CIRC)
 	cycle = !cycle
-
 
 func _on_time_changed(value: float):
 	tween_controller.set_time(value)
@@ -83,7 +85,6 @@ func _on_cooldown_changed(value: float):
 	tween_controller.set_cooldown(value)
 	cooldown_slider.value = value
 	cooldown_spinbox.value = value
-
 
 func _on_ease_type_option_item_selected(index: int):
 	match index:

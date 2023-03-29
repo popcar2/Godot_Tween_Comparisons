@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://pommihb0hl1o"]
+[gd_scene load_steps=11 format=3 uid="uid://pommihb0hl1o"]
 
 [ext_resource type="Theme" uid="uid://dt4b5okf4yefr" path="res://Themes/DefaultTheme.tres" id="1_bd402"]
 [ext_resource type="Script" path="res://Scripts/SceneController.gd" id="1_t818r"]
@@ -6,12 +6,17 @@
 [ext_resource type="Script" path="res://Scripts/PanelDisabler.gd" id="4_fnh0k"]
 [ext_resource type="Script" path="res://Scripts/SceneChanger.gd" id="4_jtq72"]
 [ext_resource type="Texture2D" uid="uid://d2427qhw4k0m6" path="res://Art/icon.svg" id="5_eeboc"]
+[ext_resource type="Script" path="res://Scripts/ShowPanelButton.gd" id="7_s067s"]
+[ext_resource type="Theme" uid="uid://37njnhj3hb8o" path="res://Themes/ShowPanelButton.tres" id="7_vxuqk"]
 
 [sub_resource type="Resource" id="Resource_rbltn"]
 script = ExtResource("2_baxib")
 tweened_property = "position:x"
 tween_from = 60.0
 tween_to = 514.0
+
+[sub_resource type="FontVariation" id="FontVariation_ls2ba"]
+variation_embolden = 1.5
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -397,6 +402,56 @@ text = "<"
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 text = ">"
+
+[node name="Circ Panel" type="Panel" parent="."]
+editor_description = "There was no space for the 11th transition type, so it's in a separate expandable panel that's hidden by default."
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -574.0
+offset_top = -161.0
+offset_bottom = -44.0
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("4_fnh0k")
+
+[node name="Transition Name" type="Label" parent="Circ Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Circular"
+horizontal_alignment = 1
+
+[node name="Circ Sprite" type="Sprite2D" parent="Circ Panel"]
+unique_name_in_owner = true
+position = Vector2(60, 80)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_eeboc")
+
+[node name="Show Panel Button" type="Button" parent="Circ Panel"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -30.0
+offset_right = 25.0
+offset_bottom = 30.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("7_vxuqk")
+theme_override_fonts/font = SubResource("FontVariation_ls2ba")
+text = ">"
+script = ExtResource("7_s067s")
 
 [connection signal="value_changed" from="VBoxContainer/Settings Panel/HBoxContainer/Time Settings/Time Spinbox" to="." method="_on_time_changed"]
 [connection signal="value_changed" from="VBoxContainer/Settings Panel/HBoxContainer/Time Settings/Time Slider" to="." method="_on_time_changed"]

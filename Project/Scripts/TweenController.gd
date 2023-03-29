@@ -7,6 +7,7 @@ signal begin_tween(time: float, ease: Tween.EaseType)
 @onready var reset_timer: Timer = $"Reset Timer"
 var ease_type: Tween.EaseType = Tween.EASE_IN_OUT
 var disabled_tweens: Array[bool]
+var circ_panel_open: bool = false
 
 func _ready():
 	timer.start()
