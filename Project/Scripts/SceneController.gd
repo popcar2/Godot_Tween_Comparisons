@@ -58,11 +58,7 @@ func _process(_delta):
 			Tween.EASE_IN: _on_ease_type_option_item_selected(1)
 			Tween.EASE_OUT: _on_ease_type_option_item_selected(2)
 			Tween.EASE_IN_OUT: _on_ease_type_option_item_selected(3)
-	elif Input.is_action_just_pressed("previous_ease"):
-		match tween_controller.get_ease():
-			Tween.EASE_OUT: _on_ease_type_option_item_selected(0)
-			Tween.EASE_IN_OUT: _on_ease_type_option_item_selected(1)
-			Tween.EASE_OUT_IN: _on_ease_type_option_item_selected(2)
+			Tween.EASE_OUT_IN: _on_ease_type_option_item_selected(0)
 
 func activate_tweens(time: float, ease_type: Tween.EaseType):
 	var tween: Tween = get_tree().create_tween()
