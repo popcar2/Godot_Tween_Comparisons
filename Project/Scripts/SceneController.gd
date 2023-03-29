@@ -43,7 +43,27 @@ func _ready():
 		Tween.EASE_OUT: easetype_option.select(1)
 		Tween.EASE_IN_OUT: easetype_option.select(2)
 		Tween.EASE_OUT_IN: easetype_option.select(3)
-	
+
+func _process(_delta):
+	if Input.is_action_just_pressed("increase_cooldown"):
+		_on_cooldown_changed(tween_controller.get_cooldown() + 0.1)
+	elif Input.is_action_just_pressed("reduce_cooldown"):
+		_on_cooldown_changed(tween_controller.get_cooldown() - 0.1)
+	elif Input.is_action_just_pressed("increase_time"):
+		_on_time_changed(tween_controller.get_time() + 0.2)
+	elif Input.is_action_just_pressed("reduce_time"):
+		_on_time_changed(tween_controller.get_time() - 0.2)
+	elif Input.is_action_just_pressed("next_ease"):
+		match tween_controller.get_ease():
+			Tween.EASE_IN: _on_ease_type_option_item_selected(1)
+			Tween.EASE_OUT: _on_ease_type_option_item_selected(2)
+			Tween.EASE_IN_OUT: _on_ease_type_option_item_selected(3)
+	elif Input.is_action_just_pressed("previous_ease"):
+		match tween_controller.get_ease():
+			Tween.EASE_OUT: _on_ease_type_option_item_selected(0)
+			Tween.EASE_IN_OUT: _on_ease_type_option_item_selected(1)
+			Tween.EASE_OUT_IN: _on_ease_type_option_item_selected(2)
+
 func activate_tweens(time: float, ease_type: Tween.EaseType):
 	var tween: Tween = get_tree().create_tween()
 	tween.set_parallel(true)
@@ -87,6 +107,7 @@ func _on_cooldown_changed(value: float):
 	cooldown_spinbox.value = value
 
 func _on_ease_type_option_item_selected(index: int):
+	easetype_option.select(index)
 	match index:
 		0: tween_controller.set_ease(Tween.EASE_IN)
 		1: tween_controller.set_ease(Tween.EASE_OUT)
