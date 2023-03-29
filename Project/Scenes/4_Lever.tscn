@@ -485,6 +485,7 @@ grow_vertical = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("4_bd1g4")
+panel_index = 10
 
 [node name="Show Panel Button" type="Button" parent="Circ Panel"]
 layout_mode = 1

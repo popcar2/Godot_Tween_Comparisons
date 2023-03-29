@@ -11,7 +11,7 @@ var circ_panel_open: bool = false
 
 func _ready():
 	timer.start()
-	disabled_tweens.resize(10)
+	disabled_tweens.resize(11)
 	disabled_tweens.fill(false)
 
 func _on_timer_timeout():

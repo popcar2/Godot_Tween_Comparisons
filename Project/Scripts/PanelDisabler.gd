@@ -2,17 +2,18 @@ extends Panel
 
 var disabled: bool = false
 var disabled_label: PackedScene = preload("res://Nodes/disabled_label.tscn")
-var panel_index: int
-
-func _enter_tree():
-	add_to_group("panel")
+@export var panel_index: int = -1
 
 func _ready():
 	# This is definitely not optimized but it's only 10 panels so who cares lol
-	for i in range(10):
-		if get_parent().get_child(i) == self:
-			panel_index = i
-			break
+	if panel_index == -1:
+		for i in range(10):
+			if get_parent().get_child(i) == self:
+				panel_index = i
+				break
+	
+	if tween_controller.get_tween_disabled(panel_index):
+		toggle_disabled()
 	
 	gui_input.connect(_on_gui_input)
 	mouse_entered.connect(_on_mouse_entered)

@@ -26,11 +26,6 @@ func _ready():
 	tween_controller.begin_tween.connect(activate_tweens)
 	tween_controller.reset()
 	
-	var panels = get_tree().get_nodes_in_group("panel")
-	for i in range(10):
-		if tween_controller.get_tween_disabled(i):
-			panels[i].toggle_disabled()
-	
 	# update settings
 	time_spinbox.value = tween_controller.get_time()
 	time_slider.value = tween_controller.get_time()
