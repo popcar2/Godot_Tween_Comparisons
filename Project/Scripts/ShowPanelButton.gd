@@ -13,6 +13,12 @@ func _ready():
 		panel.position.x = -574
 		text = '>'
 
+func _process(_delta):
+	if Input.is_action_just_pressed("ui_up") and !enabled:
+		toggle_show()
+	elif Input.is_action_just_pressed("ui_down") and enabled:
+		toggle_show()
+
 func _on_button_pressed():
 	toggle_show()
 

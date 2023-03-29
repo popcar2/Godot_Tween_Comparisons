@@ -56,9 +56,9 @@ script = ExtResource("4_gpaax")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Linear Panel"]
 layout_mode = 1
-offset_left = 12.0
+offset_left = 32.0
 offset_top = 12.0
-offset_right = 109.0
+offset_right = 129.0
 offset_bottom = 60.0
 theme_override_font_sizes/font_size = 32
 text = "Linear"
@@ -78,9 +78,9 @@ script = ExtResource("4_gpaax")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quad Panel"]
 layout_mode = 1
-offset_left = 12.0
+offset_left = 32.0
 offset_top = 12.0
-offset_right = 167.0
+offset_right = 187.0
 offset_bottom = 60.0
 theme_override_font_sizes/font_size = 32
 text = "Quadratic"
@@ -100,9 +100,9 @@ script = ExtResource("4_gpaax")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Sine Panel"]
 layout_mode = 1
-offset_left = 12.0
+offset_left = 32.0
 offset_top = 12.0
-offset_right = 77.0
+offset_right = 97.0
 offset_bottom = 60.0
 theme_override_font_sizes/font_size = 32
 text = "Sine"
@@ -122,9 +122,9 @@ script = ExtResource("4_gpaax")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Cubic Panel"]
 layout_mode = 1
-offset_left = 12.0
+offset_left = 32.0
 offset_top = 12.0
-offset_right = 97.0
+offset_right = 117.0
 offset_bottom = 60.0
 theme_override_font_sizes/font_size = 32
 text = "Cubic"
@@ -144,9 +144,9 @@ script = ExtResource("4_gpaax")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Back Panel"]
 layout_mode = 1
-offset_left = 12.0
+offset_left = 32.0
 offset_top = 12.0
-offset_right = 86.0
+offset_right = 106.0
 offset_bottom = 60.0
 theme_override_font_sizes/font_size = 32
 text = "Back"
@@ -166,9 +166,9 @@ script = ExtResource("4_gpaax")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quart Panel"]
 layout_mode = 1
-offset_left = 12.0
+offset_left = 32.0
 offset_top = 12.0
-offset_right = 128.0
+offset_right = 148.0
 offset_bottom = 60.0
 theme_override_font_sizes/font_size = 32
 text = "Quartic"
@@ -188,9 +188,9 @@ script = ExtResource("4_gpaax")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Elastic Panel"]
 layout_mode = 1
-offset_left = 12.0
+offset_left = 32.0
 offset_top = 12.0
-offset_right = 112.0
+offset_right = 132.0
 offset_bottom = 60.0
 theme_override_font_sizes/font_size = 32
 text = "Elastic"
@@ -210,9 +210,9 @@ script = ExtResource("4_gpaax")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quint Panel"]
 layout_mode = 1
-offset_left = 12.0
+offset_left = 32.0
 offset_top = 12.0
-offset_right = 124.0
+offset_right = 144.0
 offset_bottom = 60.0
 theme_override_font_sizes/font_size = 32
 text = "Quintic"
@@ -232,9 +232,9 @@ script = ExtResource("4_gpaax")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Bounce Panel"]
 layout_mode = 1
-offset_left = 12.0
+offset_left = 32.0
 offset_top = 12.0
-offset_right = 127.0
+offset_right = 147.0
 offset_bottom = 60.0
 theme_override_font_sizes/font_size = 32
 text = "Bounce"
@@ -254,9 +254,9 @@ script = ExtResource("4_gpaax")
 
 [node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Expo Panel"]
 layout_mode = 1
-offset_left = 12.0
+offset_left = 32.0
 offset_top = 12.0
-offset_right = 196.0
+offset_right = 216.0
 offset_bottom = 60.0
 theme_override_font_sizes/font_size = 32
 text = "Exponential"
@@ -392,9 +392,9 @@ size_flags_vertical = 3
 script = ExtResource("4_gpaax")
 
 [node name="Transition Name" type="Label" parent="Circ Panel"]
-offset_left = 12.0
+offset_left = 32.0
 offset_top = 12.0
-offset_right = 109.0
+offset_right = 153.0
 offset_bottom = 60.0
 theme_override_font_sizes/font_size = 32
 text = "Circular"
