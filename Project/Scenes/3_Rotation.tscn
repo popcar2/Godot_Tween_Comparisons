@@ -1,11 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://c7aw2y3w7oy6k"]
+[gd_scene load_steps=8 format=3 uid="uid://3p5kjugubadm"]
 
 [ext_resource type="Theme" uid="uid://dt4b5okf4yefr" path="res://Themes/DefaultTheme.tres" id="1_i0u4r"]
 [ext_resource type="Script" path="res://Scripts/SceneController.gd" id="1_qnglx"]
 [ext_resource type="Script" path="res://Scripts/TweenResource.gd" id="2_yr5ah"]
-[ext_resource type="Texture2D" uid="uid://d2427qhw4k0m6" path="res://icon.svg" id="3_03lkc"]
 [ext_resource type="Script" path="res://Scripts/SceneChanger.gd" id="4_5kchm"]
 [ext_resource type="Script" path="res://Scripts/PanelDisabler.gd" id="4_cy445"]
+[ext_resource type="Texture2D" uid="uid://d2427qhw4k0m6" path="res://Art/icon.svg" id="5_1nacr"]
 
 [sub_resource type="Resource" id="Resource_rbltn"]
 script = ExtResource("2_yr5ah")
@@ -60,7 +60,7 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_03lkc")
+texture = ExtResource("5_1nacr")
 
 [node name="Quad Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
@@ -85,7 +85,7 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_03lkc")
+texture = ExtResource("5_1nacr")
 
 [node name="Sine Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
@@ -110,7 +110,7 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_03lkc")
+texture = ExtResource("5_1nacr")
 
 [node name="Cubic Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
@@ -135,7 +135,7 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_03lkc")
+texture = ExtResource("5_1nacr")
 
 [node name="Back Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
@@ -160,7 +160,7 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_03lkc")
+texture = ExtResource("5_1nacr")
 
 [node name="Quart Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
@@ -185,7 +185,7 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_03lkc")
+texture = ExtResource("5_1nacr")
 
 [node name="Elastic Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
@@ -210,7 +210,7 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_03lkc")
+texture = ExtResource("5_1nacr")
 
 [node name="Quint Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
@@ -235,7 +235,7 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_03lkc")
+texture = ExtResource("5_1nacr")
 
 [node name="Bounce Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
@@ -260,7 +260,7 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_03lkc")
+texture = ExtResource("5_1nacr")
 
 [node name="Expo Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
@@ -285,7 +285,7 @@ horizontal_alignment = 1
 unique_name_in_owner = true
 position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_03lkc")
+texture = ExtResource("5_1nacr")
 
 [node name="Settings Panel" type="Panel" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 40)

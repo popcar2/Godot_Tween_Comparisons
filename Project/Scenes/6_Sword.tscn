@@ -609,6 +609,7 @@ layout_mode = 2
 size_flags_horizontal = 10
 script = ExtResource("5_5khbj")
 prev_scene = "5_HPBar"
+next_scene = "7_Fading"
 
 [node name="PrevScene Button" type="Button" parent="VBoxContainer/Settings Panel/HBoxContainer/Scene Arrows"]
 custom_minimum_size = Vector2(50, 0)

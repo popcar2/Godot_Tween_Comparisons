@@ -37,13 +37,13 @@ func toggle_disabled():
 		add_child(label)
 		for child in get_children():
 			if not child is Label:
-				child.modulate.a = 0
+				child.visibility_layer = 0
 	else:
 		modulate = Color8(300, 300, 300)
 		$"Disabled Label".queue_free()
 		for child in get_children():
 			if not child is Label:
-				child.modulate.a = 1
+				child.visibility_layer = 1
 	
 	disabled = !disabled
 	tween_controller.set_tween_disabled(disabled, panel_index)

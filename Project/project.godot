@@ -14,7 +14,7 @@ config/name="Tweens Comparison"
 run/main_scene="res://Scenes/1_Movement.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
-config/icon="res://icon.svg"
+config/icon="res://Art/icon.svg"
 
 [autoload]
 
