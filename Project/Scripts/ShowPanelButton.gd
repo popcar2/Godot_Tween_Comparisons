@@ -1,5 +1,7 @@
 extends Button
 
+## This script is for showing/hiding the Circular panel
+
 var enabled: bool = false
 @onready var panel: Panel = $".."
 

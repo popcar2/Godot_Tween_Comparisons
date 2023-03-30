@@ -1,5 +1,8 @@
 extends Control
 
+## This script is in the root control node of every scene.
+## It handles all the tweening and setting buttons.
+
 @onready var linear_sprite = %"Linear Sprite"
 @onready var sine_sprite = %"Sine Sprite"
 @onready var quad_sprite = %"Quad Sprite"
@@ -18,6 +21,7 @@ extends Control
 @onready var cooldown_slider: Slider = %"Cooldown Slider"
 @onready var easetype_option: OptionButton = %"EaseType Option"
 
+# An array of the custom resource that makes it easier to tween properties
 @export var tween_resources: Array[TweenResource]
 
 var cycle = true

@@ -1,5 +1,9 @@
 extends Node
 
+## This is the script for the autoload tween_controller
+## It handles timers to sending the signals to start all tweens
+## and holds global variables
+
 signal begin_tween(time: float, ease: Tween.EaseType)
 
 @export var cooldown: float = 0.5

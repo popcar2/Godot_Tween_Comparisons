@@ -1,5 +1,7 @@
 extends HBoxContainer
 
+## This script handles changing to different scenes
+
 @export var prev_scene: String
 @export var next_scene: String
 

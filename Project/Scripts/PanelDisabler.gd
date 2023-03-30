@@ -1,7 +1,12 @@
 extends Panel
 
+## This script handles the disabling of panels on left click
+
 var disabled: bool = false
 var disabled_label: PackedScene = preload("res://Nodes/disabled_label.tscn")
+
+# The index of the panel in the heirarchy. Automatically gets set except for
+# the circular panel, which is manually set to 10
 @export var panel_index: int = -1
 
 func _ready():
