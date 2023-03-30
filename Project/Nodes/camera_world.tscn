@@ -1,0 +1,93 @@
+[gd_scene load_steps=15 format=3 uid="uid://dhmlcq7r2u0bi"]
+
+[ext_resource type="Texture2D" uid="uid://b1hvbrg1j0lr4" path="res://Art/Tiles/Tile_Grass.png" id="1_ys0yo"]
+[ext_resource type="Texture2D" uid="uid://pkcf4fjeyfjj" path="res://Art/Tiles/Tile_Dirt.png" id="2_ohqsq"]
+[ext_resource type="Texture2D" uid="uid://njharhfayqng" path="res://Art/Tiles/Tile_Golden.png" id="3_l2g4e"]
+[ext_resource type="Texture2D" uid="uid://bcobr8ytqy5qf" path="res://Art/Characters/character_0000.png" id="4_dm6g2"]
+[ext_resource type="Texture2D" uid="uid://dwbogi7kc6fjg" path="res://Art/Characters/character_0001.png" id="5_80r75"]
+[ext_resource type="Texture2D" uid="uid://bjvoarlyhhtbj" path="res://Art/Characters/character_0002.png" id="6_cpdc5"]
+[ext_resource type="Texture2D" uid="uid://5y1gdr2xn8" path="res://Art/Characters/character_0003.png" id="7_gcvwd"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_1wwdd"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xhfsi"]
+texture = ExtResource("1_ys0yo")
+texture_region_size = Vector2i(18, 18)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ikf3a"]
+texture = ExtResource("2_ohqsq")
+texture_region_size = Vector2i(18, 18)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hs6ee"]
+texture = ExtResource("3_l2g4e")
+texture_region_size = Vector2i(18, 18)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_mqsq2"]
+tile_size = Vector2i(18, 18)
+sources/1 = SubResource("TileSetAtlasSource_xhfsi")
+sources/2 = SubResource("TileSetAtlasSource_ikf3a")
+sources/3 = SubResource("TileSetAtlasSource_hs6ee")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_slfnl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_dm6g2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_80r75")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_otk7a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_cpdc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gcvwd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="Camera_World" type="Node2D"]
+position = Vector2(0, -16)
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.0509804, 0.0980392, 0.168627, 1)
+position = Vector2(400, 0)
+scale = Vector2(2000, 500)
+texture = SubResource("CanvasTexture_1wwdd")
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
+position = Vector2(0, -22)
+scale = Vector2(2, 2)
+tile_set = SubResource("TileSet_mqsq2")
+cell_quadrant_size = 18
+format = 2
+layer_0/tile_data = PackedInt32Array(65538, 1, 0, 65537, 1, 0, 65536, 1, 0, 131071, 1, 0, 131070, 1, 0, 131069, 1, 0, 131068, 1, 0, 131067, 1, 0, 131066, 1, 0, 131065, 1, 0, 131064, 1, 0, 131063, 1, 0, 131062, 1, 0, 131073, 2, 0, 131074, 2, 0, 131075, 2, 0, 131076, 2, 0, 65539, 1, 0, 65549, 2, 0, 65550, 2, 0, 131061, 1, 0, 131060, 1, 0, 131059, 1, 0, 131058, 1, 0, 196608, 2, 0, 262143, 2, 0, 262142, 2, 0, 262141, 2, 0, 262140, 2, 0, 196604, 2, 0, 196603, 2, 0, 196605, 2, 0, 196606, 2, 0, 196607, 2, 0, 131072, 2, 0, 131084, 2, 0, 131085, 2, 0, 131086, 2, 0, 131087, 2, 0, 131088, 2, 0, 196622, 2, 0, 196621, 2, 0, 262156, 2, 0, 262155, 2, 0, 262154, 2, 0, 262153, 2, 0, 262152, 2, 0, 262149, 2, 0, 262148, 2, 0, 262147, 2, 0, 262146, 2, 0, 262145, 2, 0, 262144, 2, 0, 327679, 2, 0, 327678, 2, 0, 327677, 2, 0, 327676, 2, 0, 262139, 2, 0, 262138, 2, 0, 196619, 2, 0, 196620, 2, 0, 196618, 2, 0, 196617, 2, 0, 196613, 2, 0, 196612, 2, 0, 196611, 2, 0, 196610, 2, 0, 196609, 2, 0, 262137, 2, 0, 196601, 2, 0, 196602, 2, 0, 196600, 2, 0, 196599, 2, 0, 196598, 2, 0, 196597, 2, 0, 196596, 2, 0, 196595, 2, 0, 262132, 2, 0, 262133, 2, 0, 262134, 2, 0, 262135, 2, 0, 262136, 2, 0, 327674, 2, 0, 327673, 2, 0, 327672, 2, 0, 327671, 2, 0, 327670, 2, 0, 327669, 2, 0, 327668, 2, 0, 327667, 2, 0, 327675, 2, 0, 262157, 2, 0, 262158, 2, 0, 262159, 2, 0, 196623, 2, 0, 196624, 2, 0, 262160, 2, 0, 262131, 2, 0, 262130, 2, 0, 196594, 2, 0, 327666, 2, 0, 65552, 2, 0, 65551, 2, 0, -65532, 3, 0, 196616, 2, 0, 131081, 2, 0, 65546, 1, 0, 65547, 2, 0, 65548, 2, 0, 131082, 2, 0, 131083, 2, 0, 65553, 2, 0, 65554, 2, 0, 65555, 2, 0, 65556, 2, 0, 65557, 1, 0, 65558, 1, 0, 65559, 1, 0, 65560, 1, 0, 65561, 1, 0, 65562, 1, 0, 65563, 1, 0, 65564, 1, 0, 65565, 1, 0, 131089, 2, 0, 196625, 2, 0, 262161, 2, 0, 131090, 2, 0, 196626, 2, 0, 262162, 2, 0, 131091, 2, 0, 196627, 2, 0, 262163, 2, 0, 131092, 2, 0, 196628, 2, 0, 262164, 2, 0, 131093, 2, 0, 196629, 2, 0, 262165, 2, 0, 131094, 2, 0, 196630, 2, 0, 262166, 2, 0, 131095, 2, 0, 196631, 2, 0, 262167, 2, 0, 131096, 2, 0, 196632, 2, 0, 262168, 2, 0, 131097, 2, 0, 196633, 2, 0, 262169, 2, 0, 131098, 2, 0, 196634, 2, 0, 262170, 2, 0, 131099, 2, 0, 196635, 2, 0, 262171, 2, 0, 131100, 2, 0, 196636, 2, 0, 262172, 2, 0, 131101, 2, 0, 196637, 2, 0, 262173, 2, 0, 131077, 2, 0, 131078, 2, 0, 196614, 2, 0, 262150, 2, 0, 131079, 2, 0, 196615, 2, 0, 262151, 2, 0, 131080, 2, 0, 65540, 1, 0, 65541, 1, 0, 65542, 1, 0, 65543, 1, 0, 65544, 1, 0, 65545, 1, 0, -65525, 1, 0, 11, 2, 0, -65524, 1, 0, 12, 2, 0, -65523, 1, 0, 13, 2, 0, -65522, 1, 0, 14, 2, 0, -65521, 1, 0, 15, 2, 0, -65520, 1, 0, 16, 2, 0, -65519, 1, 0, 17, 2, 0, -65518, 1, 0, 18, 2, 0, -65517, 1, 0, 19, 2, 0, -65516, 1, 0, 20, 2, 0, -65531, 3, 0, -65530, 3, 0)
+
+[node name="Character 1" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_slfnl")
+autoplay = "default"
+frame_progress = 0.975607
+flip_h = true
+
+[node name="Character 2" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(414, -72)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_otk7a")
+autoplay = "default"
