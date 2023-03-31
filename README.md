@@ -15,3 +15,9 @@ There, you'll be able to change the values of the Tween or add more elements to 
  Feel free to duplicate the starting scene and test whatever tween you'd like to see!
 
 Loved the project? [Consider buying me a cup of ko-fi!](https://ko-fi.com/popcar2)
+
+## Credits
+
+Sprites by [Kenney Assets](https://kenney.nl/) and [Anokolisa](https://anokolisa.itch.io/dungeon-crawler-pixel-art-asset-pack).
+
+Everything else is by me (popcar2).
