@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://drusup5tiyvxq"]
+[gd_scene load_steps=9 format=3 uid="uid://drusup5tiyvxq"]
 
 [ext_resource type="Theme" uid="uid://dt4b5okf4yefr" path="res://Themes/DefaultTheme.tres" id="1_v808r"]
 [ext_resource type="Script" path="res://Scripts/SceneController.gd" id="2_bc5c0"]
@@ -6,8 +6,6 @@
 [ext_resource type="Script" path="res://Scripts/PanelDisabler.gd" id="4_435pt"]
 [ext_resource type="PackedScene" uid="uid://dhmlcq7r2u0bi" path="res://Nodes/camera_world.tscn" id="5_x18tl"]
 [ext_resource type="Script" path="res://Scripts/SceneChanger.gd" id="6_g8lxn"]
-[ext_resource type="Theme" uid="uid://37njnhj3hb8o" path="res://Themes/ShowPanelButton.tres" id="7_pqtqt"]
-[ext_resource type="Script" path="res://Scripts/ShowPanelButton.gd" id="8_r3gsb"]
 
 [sub_resource type="Resource" id="Resource_rbltn"]
 script = ExtResource("3_qeoam")
@@ -20,9 +18,6 @@ script = ExtResource("3_qeoam")
 tweened_property = "position:y"
 tween_from = 0.0
 tween_to = -72.0
-
-[sub_resource type="FontVariation" id="FontVariation_ls2ba"]
-variation_embolden = 1.5
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -65,7 +60,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="VBoxContainer/GridContainer/Linear Panel/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(574, 118)
+size = Vector2i(574, 122)
 render_target_update_mode = 4
 
 [node name="Camera_World" parent="VBoxContainer/GridContainer/Linear Panel/SubViewportContainer/SubViewport" instance=ExtResource("5_x18tl")]
@@ -87,45 +82,6 @@ theme_override_font_sizes/font_size = 32
 text = "Linear"
 horizontal_alignment = 1
 
-[node name="Quad Panel" type="Panel" parent="VBoxContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("4_435pt")
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="VBoxContainer/GridContainer/Quad Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-stretch = true
-
-[node name="SubViewport" type="SubViewport" parent="VBoxContainer/GridContainer/Quad Panel/SubViewportContainer"]
-handle_input_locally = false
-size = Vector2i(574, 118)
-render_target_update_mode = 4
-
-[node name="Camera_World" parent="VBoxContainer/GridContainer/Quad Panel/SubViewportContainer/SubViewport" instance=ExtResource("5_x18tl")]
-position = Vector2(0, 0)
-
-[node name="Quad Sprite" type="Camera2D" parent="VBoxContainer/GridContainer/Quad Panel/SubViewportContainer/SubViewport"]
-unique_name_in_owner = true
-
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quad Panel"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
-text = "Quadratic"
-horizontal_alignment = 1
-
 [node name="Sine Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -143,7 +99,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="VBoxContainer/GridContainer/Sine Panel/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(574, 118)
+size = Vector2i(574, 122)
 render_target_update_mode = 4
 
 [node name="Camera_World" parent="VBoxContainer/GridContainer/Sine Panel/SubViewportContainer/SubViewport" instance=ExtResource("5_x18tl")]
@@ -165,6 +121,85 @@ theme_override_font_sizes/font_size = 32
 text = "Sine"
 horizontal_alignment = 1
 
+[node name="Quad Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("4_435pt")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="VBoxContainer/GridContainer/Quad Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="VBoxContainer/GridContainer/Quad Panel/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(574, 122)
+render_target_update_mode = 4
+
+[node name="Camera_World" parent="VBoxContainer/GridContainer/Quad Panel/SubViewportContainer/SubViewport" instance=ExtResource("5_x18tl")]
+position = Vector2(0, 0)
+
+[node name="Quad Sprite" type="Camera2D" parent="VBoxContainer/GridContainer/Quad Panel/SubViewportContainer/SubViewport"]
+unique_name_in_owner = true
+
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quad Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Quadratic"
+horizontal_alignment = 1
+
+[node name="Circ Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+editor_description = "There was no space for the 11th transition type, so it's in a separate expandable panel that's hidden by default."
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("4_435pt")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="VBoxContainer/GridContainer/Circ Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="VBoxContainer/GridContainer/Circ Panel/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(574, 122)
+render_target_update_mode = 4
+
+[node name="Camera_World" parent="VBoxContainer/GridContainer/Circ Panel/SubViewportContainer/SubViewport" instance=ExtResource("5_x18tl")]
+position = Vector2(0, 0)
+
+[node name="Circ Sprite" type="Camera2D" parent="VBoxContainer/GridContainer/Circ Panel/SubViewportContainer/SubViewport"]
+unique_name_in_owner = true
+
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Circ Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Circular"
+horizontal_alignment = 1
+
 [node name="Cubic Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -182,7 +217,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="VBoxContainer/GridContainer/Cubic Panel/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(574, 118)
+size = Vector2i(574, 121)
 render_target_update_mode = 4
 
 [node name="Camera_World" parent="VBoxContainer/GridContainer/Cubic Panel/SubViewportContainer/SubViewport" instance=ExtResource("5_x18tl")]
@@ -204,84 +239,6 @@ theme_override_font_sizes/font_size = 32
 text = "Cubic"
 horizontal_alignment = 1
 
-[node name="Back Panel" type="Panel" parent="VBoxContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("4_435pt")
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="VBoxContainer/GridContainer/Back Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-stretch = true
-
-[node name="SubViewport" type="SubViewport" parent="VBoxContainer/GridContainer/Back Panel/SubViewportContainer"]
-handle_input_locally = false
-size = Vector2i(574, 118)
-render_target_update_mode = 4
-
-[node name="Camera_World" parent="VBoxContainer/GridContainer/Back Panel/SubViewportContainer/SubViewport" instance=ExtResource("5_x18tl")]
-position = Vector2(0, 0)
-
-[node name="Back Sprite" type="Camera2D" parent="VBoxContainer/GridContainer/Back Panel/SubViewportContainer/SubViewport"]
-unique_name_in_owner = true
-
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Back Panel"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
-text = "Back"
-horizontal_alignment = 1
-
-[node name="Quart Panel" type="Panel" parent="VBoxContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("4_435pt")
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="VBoxContainer/GridContainer/Quart Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-stretch = true
-
-[node name="SubViewport" type="SubViewport" parent="VBoxContainer/GridContainer/Quart Panel/SubViewportContainer"]
-handle_input_locally = false
-size = Vector2i(574, 118)
-render_target_update_mode = 4
-
-[node name="Camera_World" parent="VBoxContainer/GridContainer/Quart Panel/SubViewportContainer/SubViewport" instance=ExtResource("5_x18tl")]
-position = Vector2(0, 0)
-
-[node name="Quart Sprite" type="Camera2D" parent="VBoxContainer/GridContainer/Quart Panel/SubViewportContainer/SubViewport"]
-unique_name_in_owner = true
-
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quart Panel"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
-text = "Quartic"
-horizontal_alignment = 1
-
 [node name="Elastic Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -299,7 +256,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="VBoxContainer/GridContainer/Elastic Panel/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(574, 117)
+size = Vector2i(574, 121)
 render_target_update_mode = 4
 
 [node name="Camera_World" parent="VBoxContainer/GridContainer/Elastic Panel/SubViewportContainer/SubViewport" instance=ExtResource("5_x18tl")]
@@ -321,6 +278,84 @@ theme_override_font_sizes/font_size = 32
 text = "Elastic"
 horizontal_alignment = 1
 
+[node name="Quart Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("4_435pt")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="VBoxContainer/GridContainer/Quart Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="VBoxContainer/GridContainer/Quart Panel/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(574, 121)
+render_target_update_mode = 4
+
+[node name="Camera_World" parent="VBoxContainer/GridContainer/Quart Panel/SubViewportContainer/SubViewport" instance=ExtResource("5_x18tl")]
+position = Vector2(0, 0)
+
+[node name="Quart Sprite" type="Camera2D" parent="VBoxContainer/GridContainer/Quart Panel/SubViewportContainer/SubViewport"]
+unique_name_in_owner = true
+
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Quart Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Quartic"
+horizontal_alignment = 1
+
+[node name="Back Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("4_435pt")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="VBoxContainer/GridContainer/Back Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="VBoxContainer/GridContainer/Back Panel/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(574, 121)
+render_target_update_mode = 4
+
+[node name="Camera_World" parent="VBoxContainer/GridContainer/Back Panel/SubViewportContainer/SubViewport" instance=ExtResource("5_x18tl")]
+position = Vector2(0, 0)
+
+[node name="Back Sprite" type="Camera2D" parent="VBoxContainer/GridContainer/Back Panel/SubViewportContainer/SubViewport"]
+unique_name_in_owner = true
+
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Back Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Back"
+horizontal_alignment = 1
+
 [node name="Quint Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -338,7 +373,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="VBoxContainer/GridContainer/Quint Panel/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(574, 117)
+size = Vector2i(574, 121)
 render_target_update_mode = 4
 
 [node name="Camera_World" parent="VBoxContainer/GridContainer/Quint Panel/SubViewportContainer/SubViewport" instance=ExtResource("5_x18tl")]
@@ -360,13 +395,13 @@ theme_override_font_sizes/font_size = 32
 text = "Quintic"
 horizontal_alignment = 1
 
-[node name="Bounce Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+[node name="Spring Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("4_435pt")
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="VBoxContainer/GridContainer/Bounce Panel"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="VBoxContainer/GridContainer/Spring Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -375,18 +410,18 @@ grow_horizontal = 2
 grow_vertical = 2
 stretch = true
 
-[node name="SubViewport" type="SubViewport" parent="VBoxContainer/GridContainer/Bounce Panel/SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="VBoxContainer/GridContainer/Spring Panel/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(574, 117)
+size = Vector2i(574, 121)
 render_target_update_mode = 4
 
-[node name="Camera_World" parent="VBoxContainer/GridContainer/Bounce Panel/SubViewportContainer/SubViewport" instance=ExtResource("5_x18tl")]
+[node name="Camera_World" parent="VBoxContainer/GridContainer/Spring Panel/SubViewportContainer/SubViewport" instance=ExtResource("5_x18tl")]
 position = Vector2(0, 0)
 
-[node name="Bounce Sprite" type="Camera2D" parent="VBoxContainer/GridContainer/Bounce Panel/SubViewportContainer/SubViewport"]
+[node name="Spring Sprite" type="Camera2D" parent="VBoxContainer/GridContainer/Spring Panel/SubViewportContainer/SubViewport"]
 unique_name_in_owner = true
 
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Bounce Panel"]
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Spring Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -396,7 +431,7 @@ offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 32
-text = "Bounce"
+text = "Spring"
 horizontal_alignment = 1
 
 [node name="Expo Panel" type="Panel" parent="VBoxContainer/GridContainer"]
@@ -416,7 +451,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="VBoxContainer/GridContainer/Expo Panel/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(574, 117)
+size = Vector2i(574, 121)
 render_target_update_mode = 4
 
 [node name="Camera_World" parent="VBoxContainer/GridContainer/Expo Panel/SubViewportContainer/SubViewport" instance=ExtResource("5_x18tl")]
@@ -436,6 +471,45 @@ offset_bottom = 23.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 32
 text = "Exponential"
+horizontal_alignment = 1
+
+[node name="Bounce Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("4_435pt")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="VBoxContainer/GridContainer/Bounce Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="VBoxContainer/GridContainer/Bounce Panel/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(574, 121)
+render_target_update_mode = 4
+
+[node name="Camera_World" parent="VBoxContainer/GridContainer/Bounce Panel/SubViewportContainer/SubViewport" instance=ExtResource("5_x18tl")]
+position = Vector2(0, 0)
+
+[node name="Bounce Sprite" type="Camera2D" parent="VBoxContainer/GridContainer/Bounce Panel/SubViewportContainer/SubViewport"]
+unique_name_in_owner = true
+
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Bounce Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Bounce"
 horizontal_alignment = 1
 
 [node name="Settings Panel" type="Panel" parent="VBoxContainer"]
@@ -546,71 +620,6 @@ text = "<"
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 text = ">"
-
-[node name="Circ Panel" type="Panel" parent="."]
-editor_description = "There was no space for the 11th transition type, so it's in a separate expandable panel that's hidden by default."
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = -574.0
-offset_top = -161.0
-offset_bottom = -44.0
-grow_vertical = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("4_435pt")
-panel_index = 10
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="Circ Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-stretch = true
-
-[node name="SubViewport" type="SubViewport" parent="Circ Panel/SubViewportContainer"]
-handle_input_locally = false
-size = Vector2i(574, 117)
-render_target_update_mode = 4
-
-[node name="Camera_World" parent="Circ Panel/SubViewportContainer/SubViewport" instance=ExtResource("5_x18tl")]
-position = Vector2(0, 0)
-
-[node name="Circ Sprite" type="Camera2D" parent="Circ Panel/SubViewportContainer/SubViewport"]
-unique_name_in_owner = true
-
-[node name="Transition Name" type="Label" parent="Circ Panel"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
-text = "Circular"
-horizontal_alignment = 1
-
-[node name="Show Panel Button" type="Button" parent="Circ Panel"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -30.0
-offset_right = 25.0
-offset_bottom = 30.0
-grow_horizontal = 0
-grow_vertical = 2
-theme = ExtResource("7_pqtqt")
-theme_override_fonts/font = SubResource("FontVariation_ls2ba")
-text = ">"
-script = ExtResource("8_r3gsb")
 
 [connection signal="value_changed" from="VBoxContainer/Settings Panel/HBoxContainer/Time Settings/Time Spinbox" to="." method="_on_time_changed"]
 [connection signal="value_changed" from="VBoxContainer/Settings Panel/HBoxContainer/Time Settings/Time Slider" to="." method="_on_time_changed"]

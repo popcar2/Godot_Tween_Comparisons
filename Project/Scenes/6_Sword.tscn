@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://f16bk5t2kmwt"]
+[gd_scene load_steps=13 format=3 uid="uid://f16bk5t2kmwt"]
 
 [ext_resource type="Theme" uid="uid://dt4b5okf4yefr" path="res://Themes/DefaultTheme.tres" id="1_27qbq"]
 [ext_resource type="Script" path="res://Scripts/SceneController.gd" id="2_bthpg"]
@@ -8,8 +8,6 @@
 [ext_resource type="Script" path="res://Scripts/SceneChanger.gd" id="5_5khbj"]
 [ext_resource type="Texture2D" uid="uid://qdli0ptbxeyy" path="res://Art/Skeleton.png" id="5_yrnmm"]
 [ext_resource type="Script" path="res://Scripts/FlashOnTouch.gd" id="6_7j733"]
-[ext_resource type="Theme" uid="uid://37njnhj3hb8o" path="res://Themes/ShowPanelButton.tres" id="9_dbhiy"]
-[ext_resource type="Script" path="res://Scripts/ShowPanelButton.gd" id="10_dqdni"]
 
 [sub_resource type="Resource" id="Resource_rbltn"]
 script = ExtResource("3_4dkf2")
@@ -28,9 +26,6 @@ size = Vector2(8, 30)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0km2n"]
 radius = 6.0
-
-[sub_resource type="FontVariation" id="FontVariation_bfqpe"]
-variation_embolden = 1.5
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -104,6 +99,54 @@ collision_layer = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Linear Panel/Skeleton/Area2D"]
 shape = SubResource("CapsuleShape2D_0km2n")
 
+[node name="Sine Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("4_mdfto")
+
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Sine Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Sine"
+horizontal_alignment = 1
+
+[node name="Sine Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Sine Panel"]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(174, 76)
+scale = Vector2(2, 2)
+texture = ExtResource("4_v1bm3")
+offset = Vector2(0, -12)
+
+[node name="Area2D" type="Area2D" parent="VBoxContainer/GridContainer/Sine Panel/Sine Sprite"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Sine Panel/Sine Sprite/Area2D"]
+position = Vector2(0, -17.5)
+shape = SubResource("RectangleShape2D_ewjtk")
+
+[node name="Skeleton" type="Sprite2D" parent="VBoxContainer/GridContainer/Sine Panel"]
+texture_filter = 1
+position = Vector2(400, 59)
+scale = Vector2(3, 3)
+texture = ExtResource("5_yrnmm")
+flip_h = true
+script = ExtResource("6_7j733")
+
+[node name="Area2D" type="Area2D" parent="VBoxContainer/GridContainer/Sine Panel/Skeleton"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Sine Panel/Skeleton/Area2D"]
+shape = SubResource("CapsuleShape2D_0km2n")
+
 [node name="Quad Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -152,13 +195,13 @@ collision_layer = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Quad Panel/Skeleton/Area2D"]
 shape = SubResource("CapsuleShape2D_0km2n")
 
-[node name="Sine Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+[node name="Circ Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("4_mdfto")
 
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Sine Panel"]
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Circ Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -168,10 +211,10 @@ offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 32
-text = "Sine"
+text = "Circular"
 horizontal_alignment = 1
 
-[node name="Sine Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Sine Panel"]
+[node name="Circ Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Circ Panel"]
 unique_name_in_owner = true
 texture_filter = 1
 position = Vector2(174, 76)
@@ -179,14 +222,15 @@ scale = Vector2(2, 2)
 texture = ExtResource("4_v1bm3")
 offset = Vector2(0, -12)
 
-[node name="Area2D" type="Area2D" parent="VBoxContainer/GridContainer/Sine Panel/Sine Sprite"]
-collision_mask = 2
+[node name="Area2D" type="Area2D" parent="VBoxContainer/GridContainer/Circ Panel/Circ Sprite"]
+collision_layer = 4
+collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Sine Panel/Sine Sprite/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Circ Panel/Circ Sprite/Area2D"]
 position = Vector2(0, -17.5)
 shape = SubResource("RectangleShape2D_ewjtk")
 
-[node name="Skeleton" type="Sprite2D" parent="VBoxContainer/GridContainer/Sine Panel"]
+[node name="Skeleton" type="Sprite2D" parent="VBoxContainer/GridContainer/Circ Panel"]
 texture_filter = 1
 position = Vector2(400, 59)
 scale = Vector2(3, 3)
@@ -194,10 +238,11 @@ texture = ExtResource("5_yrnmm")
 flip_h = true
 script = ExtResource("6_7j733")
 
-[node name="Area2D" type="Area2D" parent="VBoxContainer/GridContainer/Sine Panel/Skeleton"]
-collision_layer = 2
+[node name="Area2D" type="Area2D" parent="VBoxContainer/GridContainer/Circ Panel/Skeleton"]
+collision_layer = 4
+collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Sine Panel/Skeleton/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Circ Panel/Skeleton/Area2D"]
 shape = SubResource("CapsuleShape2D_0km2n")
 
 [node name="Cubic Panel" type="Panel" parent="VBoxContainer/GridContainer"]
@@ -248,13 +293,13 @@ collision_layer = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Cubic Panel/Skeleton/Area2D"]
 shape = SubResource("CapsuleShape2D_0km2n")
 
-[node name="Back Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+[node name="Elastic Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("4_mdfto")
 
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Back Panel"]
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Elastic Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -264,10 +309,10 @@ offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 32
-text = "Back"
+text = "Elastic"
 horizontal_alignment = 1
 
-[node name="Back Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Back Panel"]
+[node name="Elastic Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Elastic Panel"]
 unique_name_in_owner = true
 texture_filter = 1
 position = Vector2(174, 76)
@@ -275,14 +320,14 @@ scale = Vector2(2, 2)
 texture = ExtResource("4_v1bm3")
 offset = Vector2(0, -12)
 
-[node name="Area2D" type="Area2D" parent="VBoxContainer/GridContainer/Back Panel/Back Sprite"]
+[node name="Area2D" type="Area2D" parent="VBoxContainer/GridContainer/Elastic Panel/Elastic Sprite"]
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Back Panel/Back Sprite/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Elastic Panel/Elastic Sprite/Area2D"]
 position = Vector2(0, -17.5)
 shape = SubResource("RectangleShape2D_ewjtk")
 
-[node name="Skeleton" type="Sprite2D" parent="VBoxContainer/GridContainer/Back Panel"]
+[node name="Skeleton" type="Sprite2D" parent="VBoxContainer/GridContainer/Elastic Panel"]
 texture_filter = 1
 position = Vector2(400, 59)
 scale = Vector2(3, 3)
@@ -290,10 +335,10 @@ texture = ExtResource("5_yrnmm")
 flip_h = true
 script = ExtResource("6_7j733")
 
-[node name="Area2D" type="Area2D" parent="VBoxContainer/GridContainer/Back Panel/Skeleton"]
+[node name="Area2D" type="Area2D" parent="VBoxContainer/GridContainer/Elastic Panel/Skeleton"]
 collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Back Panel/Skeleton/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Elastic Panel/Skeleton/Area2D"]
 shape = SubResource("CapsuleShape2D_0km2n")
 
 [node name="Quart Panel" type="Panel" parent="VBoxContainer/GridContainer"]
@@ -344,13 +389,13 @@ collision_layer = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Quart Panel/Skeleton/Area2D"]
 shape = SubResource("CapsuleShape2D_0km2n")
 
-[node name="Elastic Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+[node name="Back Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("4_mdfto")
 
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Elastic Panel"]
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Back Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -360,10 +405,10 @@ offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 32
-text = "Elastic"
+text = "Back"
 horizontal_alignment = 1
 
-[node name="Elastic Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Elastic Panel"]
+[node name="Back Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Back Panel"]
 unique_name_in_owner = true
 texture_filter = 1
 position = Vector2(174, 76)
@@ -371,14 +416,14 @@ scale = Vector2(2, 2)
 texture = ExtResource("4_v1bm3")
 offset = Vector2(0, -12)
 
-[node name="Area2D" type="Area2D" parent="VBoxContainer/GridContainer/Elastic Panel/Elastic Sprite"]
+[node name="Area2D" type="Area2D" parent="VBoxContainer/GridContainer/Back Panel/Back Sprite"]
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Elastic Panel/Elastic Sprite/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Back Panel/Back Sprite/Area2D"]
 position = Vector2(0, -17.5)
 shape = SubResource("RectangleShape2D_ewjtk")
 
-[node name="Skeleton" type="Sprite2D" parent="VBoxContainer/GridContainer/Elastic Panel"]
+[node name="Skeleton" type="Sprite2D" parent="VBoxContainer/GridContainer/Back Panel"]
 texture_filter = 1
 position = Vector2(400, 59)
 scale = Vector2(3, 3)
@@ -386,10 +431,10 @@ texture = ExtResource("5_yrnmm")
 flip_h = true
 script = ExtResource("6_7j733")
 
-[node name="Area2D" type="Area2D" parent="VBoxContainer/GridContainer/Elastic Panel/Skeleton"]
+[node name="Area2D" type="Area2D" parent="VBoxContainer/GridContainer/Back Panel/Skeleton"]
 collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Elastic Panel/Skeleton/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Back Panel/Skeleton/Area2D"]
 shape = SubResource("CapsuleShape2D_0km2n")
 
 [node name="Quint Panel" type="Panel" parent="VBoxContainer/GridContainer"]
@@ -440,13 +485,13 @@ collision_layer = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Quint Panel/Skeleton/Area2D"]
 shape = SubResource("CapsuleShape2D_0km2n")
 
-[node name="Bounce Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+[node name="Spring Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("4_mdfto")
 
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Bounce Panel"]
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Spring Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -456,10 +501,10 @@ offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 32
-text = "Bounce"
+text = "Spring"
 horizontal_alignment = 1
 
-[node name="Bounce Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Bounce Panel"]
+[node name="Spring Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Spring Panel"]
 unique_name_in_owner = true
 texture_filter = 1
 position = Vector2(174, 76)
@@ -467,14 +512,14 @@ scale = Vector2(2, 2)
 texture = ExtResource("4_v1bm3")
 offset = Vector2(0, -12)
 
-[node name="Area2D" type="Area2D" parent="VBoxContainer/GridContainer/Bounce Panel/Bounce Sprite"]
+[node name="Area2D" type="Area2D" parent="VBoxContainer/GridContainer/Spring Panel/Spring Sprite"]
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Bounce Panel/Bounce Sprite/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Spring Panel/Spring Sprite/Area2D"]
 position = Vector2(0, -17.5)
 shape = SubResource("RectangleShape2D_ewjtk")
 
-[node name="Skeleton" type="Sprite2D" parent="VBoxContainer/GridContainer/Bounce Panel"]
+[node name="Skeleton" type="Sprite2D" parent="VBoxContainer/GridContainer/Spring Panel"]
 texture_filter = 1
 position = Vector2(400, 59)
 scale = Vector2(3, 3)
@@ -482,10 +527,10 @@ texture = ExtResource("5_yrnmm")
 flip_h = true
 script = ExtResource("6_7j733")
 
-[node name="Area2D" type="Area2D" parent="VBoxContainer/GridContainer/Bounce Panel/Skeleton"]
+[node name="Area2D" type="Area2D" parent="VBoxContainer/GridContainer/Spring Panel/Skeleton"]
 collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Bounce Panel/Skeleton/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Spring Panel/Skeleton/Area2D"]
 shape = SubResource("CapsuleShape2D_0km2n")
 
 [node name="Expo Panel" type="Panel" parent="VBoxContainer/GridContainer"]
@@ -534,6 +579,54 @@ script = ExtResource("6_7j733")
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Expo Panel/Skeleton/Area2D"]
+shape = SubResource("CapsuleShape2D_0km2n")
+
+[node name="Bounce Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("4_mdfto")
+
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Bounce Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Bounce"
+horizontal_alignment = 1
+
+[node name="Bounce Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Bounce Panel"]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(174, 76)
+scale = Vector2(2, 2)
+texture = ExtResource("4_v1bm3")
+offset = Vector2(0, -12)
+
+[node name="Area2D" type="Area2D" parent="VBoxContainer/GridContainer/Bounce Panel/Bounce Sprite"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Bounce Panel/Bounce Sprite/Area2D"]
+position = Vector2(0, -17.5)
+shape = SubResource("RectangleShape2D_ewjtk")
+
+[node name="Skeleton" type="Sprite2D" parent="VBoxContainer/GridContainer/Bounce Panel"]
+texture_filter = 1
+position = Vector2(400, 59)
+scale = Vector2(3, 3)
+texture = ExtResource("5_yrnmm")
+flip_h = true
+script = ExtResource("6_7j733")
+
+[node name="Area2D" type="Area2D" parent="VBoxContainer/GridContainer/Bounce Panel/Skeleton"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VBoxContainer/GridContainer/Bounce Panel/Skeleton/Area2D"]
 shape = SubResource("CapsuleShape2D_0km2n")
 
 [node name="Settings Panel" type="Panel" parent="VBoxContainer"]
@@ -645,81 +738,6 @@ text = "<"
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 text = ">"
-
-[node name="Circ Panel" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = -574.0
-offset_top = -161.0
-offset_bottom = -44.0
-grow_vertical = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("4_mdfto")
-panel_index = 10
-
-[node name="Show Panel Button" type="Button" parent="Circ Panel"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -30.0
-offset_right = 25.0
-offset_bottom = 30.0
-grow_horizontal = 0
-grow_vertical = 2
-theme = ExtResource("9_dbhiy")
-theme_override_fonts/font = SubResource("FontVariation_bfqpe")
-text = ">"
-script = ExtResource("10_dqdni")
-
-[node name="Transition Name" type="Label" parent="Circ Panel"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
-text = "Circular"
-horizontal_alignment = 1
-
-[node name="Circ Sprite" type="Sprite2D" parent="Circ Panel"]
-unique_name_in_owner = true
-texture_filter = 1
-position = Vector2(174, 76)
-scale = Vector2(2, 2)
-texture = ExtResource("4_v1bm3")
-offset = Vector2(0, -12)
-
-[node name="Area2D" type="Area2D" parent="Circ Panel/Circ Sprite"]
-collision_layer = 4
-collision_mask = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Circ Panel/Circ Sprite/Area2D"]
-position = Vector2(0, -17.5)
-shape = SubResource("RectangleShape2D_ewjtk")
-
-[node name="Skeleton" type="Sprite2D" parent="Circ Panel"]
-texture_filter = 1
-position = Vector2(400, 59)
-scale = Vector2(3, 3)
-texture = ExtResource("5_yrnmm")
-flip_h = true
-script = ExtResource("6_7j733")
-
-[node name="Area2D" type="Area2D" parent="Circ Panel/Skeleton"]
-collision_layer = 4
-collision_mask = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Circ Panel/Skeleton/Area2D"]
-shape = SubResource("CapsuleShape2D_0km2n")
 
 [connection signal="value_changed" from="VBoxContainer/Settings Panel/HBoxContainer/Time Settings/Time Spinbox" to="." method="_on_time_changed"]
 [connection signal="value_changed" from="VBoxContainer/Settings Panel/HBoxContainer/Time Settings/Time Slider" to="." method="_on_time_changed"]

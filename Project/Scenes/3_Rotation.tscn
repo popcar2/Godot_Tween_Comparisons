@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://3p5kjugubadm"]
+[gd_scene load_steps=8 format=3 uid="uid://3p5kjugubadm"]
 
 [ext_resource type="Theme" uid="uid://dt4b5okf4yefr" path="res://Themes/DefaultTheme.tres" id="1_i0u4r"]
 [ext_resource type="Script" path="res://Scripts/SceneController.gd" id="1_qnglx"]
@@ -6,17 +6,12 @@
 [ext_resource type="Script" path="res://Scripts/SceneChanger.gd" id="4_5kchm"]
 [ext_resource type="Script" path="res://Scripts/PanelDisabler.gd" id="4_cy445"]
 [ext_resource type="Texture2D" uid="uid://d2427qhw4k0m6" path="res://Art/icon.svg" id="5_1nacr"]
-[ext_resource type="Theme" uid="uid://37njnhj3hb8o" path="res://Themes/ShowPanelButton.tres" id="7_ucig0"]
-[ext_resource type="Script" path="res://Scripts/ShowPanelButton.gd" id="8_uyoiq"]
 
 [sub_resource type="Resource" id="Resource_rbltn"]
 script = ExtResource("2_yr5ah")
 tweened_property = "rotation_degrees"
 tween_from = 0.0
 tween_to = 180.0
-
-[sub_resource type="FontVariation" id="FontVariation_bfpbf"]
-variation_embolden = 1.5
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -67,6 +62,31 @@ position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_1nacr")
 
+[node name="Sine Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("4_cy445")
+
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Sine Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Sine"
+horizontal_alignment = 1
+
+[node name="Sine Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Sine Panel"]
+unique_name_in_owner = true
+position = Vector2(287, 80)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_1nacr")
+
 [node name="Quad Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -92,13 +112,13 @@ position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_1nacr")
 
-[node name="Sine Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+[node name="Circ Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("4_cy445")
 
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Sine Panel"]
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Circ Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -108,10 +128,10 @@ offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 32
-text = "Sine"
+text = "Circular"
 horizontal_alignment = 1
 
-[node name="Sine Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Sine Panel"]
+[node name="Circ Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Circ Panel"]
 unique_name_in_owner = true
 position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
@@ -142,13 +162,13 @@ position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_1nacr")
 
-[node name="Back Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+[node name="Elastic Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("4_cy445")
 
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Back Panel"]
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Elastic Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -158,10 +178,10 @@ offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 32
-text = "Back"
+text = "Elastic"
 horizontal_alignment = 1
 
-[node name="Back Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Back Panel"]
+[node name="Elastic Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Elastic Panel"]
 unique_name_in_owner = true
 position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
@@ -192,13 +212,13 @@ position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_1nacr")
 
-[node name="Elastic Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+[node name="Back Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("4_cy445")
 
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Elastic Panel"]
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Back Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -208,10 +228,10 @@ offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 32
-text = "Elastic"
+text = "Back"
 horizontal_alignment = 1
 
-[node name="Elastic Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Elastic Panel"]
+[node name="Back Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Back Panel"]
 unique_name_in_owner = true
 position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
@@ -242,13 +262,13 @@ position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_1nacr")
 
-[node name="Bounce Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+[node name="Spring Panel" type="Panel" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("4_cy445")
 
-[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Bounce Panel"]
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Spring Panel"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -258,10 +278,10 @@ offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 32
-text = "Bounce"
+text = "Spring"
 horizontal_alignment = 1
 
-[node name="Bounce Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Bounce Panel"]
+[node name="Spring Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Spring Panel"]
 unique_name_in_owner = true
 position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
@@ -287,6 +307,31 @@ text = "Exponential"
 horizontal_alignment = 1
 
 [node name="Expo Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Expo Panel"]
+unique_name_in_owner = true
+position = Vector2(287, 80)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_1nacr")
+
+[node name="Bounce Panel" type="Panel" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("4_cy445")
+
+[node name="Transition Name" type="Label" parent="VBoxContainer/GridContainer/Bounce Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Bounce"
+horizontal_alignment = 1
+
+[node name="Bounce Sprite" type="Sprite2D" parent="VBoxContainer/GridContainer/Bounce Panel"]
 unique_name_in_owner = true
 position = Vector2(287, 80)
 scale = Vector2(0.5, 0.5)
@@ -401,56 +446,6 @@ text = "<"
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 text = ">"
-
-[node name="Circ Panel" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = -574.0
-offset_top = -161.0
-offset_bottom = -44.0
-grow_vertical = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("4_cy445")
-panel_index = 10
-
-[node name="Show Panel Button" type="Button" parent="Circ Panel"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_top = -30.0
-offset_right = 25.0
-offset_bottom = 30.0
-grow_horizontal = 0
-grow_vertical = 2
-theme = ExtResource("7_ucig0")
-theme_override_fonts/font = SubResource("FontVariation_bfpbf")
-text = ">"
-script = ExtResource("8_uyoiq")
-
-[node name="Transition Name" type="Label" parent="Circ Panel"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 32
-text = "Circular"
-horizontal_alignment = 1
-
-[node name="Circ Sprite" type="Sprite2D" parent="Circ Panel"]
-unique_name_in_owner = true
-position = Vector2(287, 80)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("5_1nacr")
 
 [connection signal="value_changed" from="VBoxContainer/Settings Panel/HBoxContainer/Time Settings/Time Spinbox" to="." method="_on_time_changed"]
 [connection signal="value_changed" from="VBoxContainer/Settings Panel/HBoxContainer/Time Settings/Time Slider" to="." method="_on_time_changed"]
